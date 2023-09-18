@@ -1,0 +1,13 @@
+root = true
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+
+[*.{kt,kts}]
+max_line_length = off
+#ignore wildcard imports
+ij_kotlin_packages_to_use_import_on_demand = *.**
+
