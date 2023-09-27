@@ -1,4 +1,6 @@
 #!/bin/bash
+cd "${0%/*}"
+cd ../../
 # Run Ktlint to check for code style errors
 ./gradlew ktlintFormat
 # Capture the exit code of the previous command

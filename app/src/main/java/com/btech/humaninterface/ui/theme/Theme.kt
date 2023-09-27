@@ -9,11 +9,19 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import com.btech.presentation.theme.BtechSpacing
+import com.btech.presentation.theme.BtechTypography
+import com.btech.presentation.theme.DarkColorPalette
+import com.btech.presentation.theme.LightColorPalette
+import com.btech.presentation.theme.LocalColors
+import com.btech.presentation.theme.LocalSpacing
+import com.btech.presentation.theme.LocalTypography
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -44,6 +52,7 @@ fun HumanInterfaceTheme(
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
+    val colors = if (darkTheme) DarkColorPalette else LightColorPalette
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
@@ -57,14 +66,23 @@ fun HumanInterfaceTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
+            window.statusBarColor = colorScheme.background.toArgb()
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
         }
     }
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
-    )
+    val typography = BtechTypography()
+    val spacing = BtechSpacing()
+
+    CompositionLocalProvider(
+        LocalTypography provides typography,
+        LocalColors provides colors,
+        LocalSpacing provides spacing
+    ) {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = Typography,
+            content = content
+        )
+    }
 }

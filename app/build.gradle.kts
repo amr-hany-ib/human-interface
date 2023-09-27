@@ -77,6 +77,7 @@ dependencies {
     implementation(libs.material3)
     implementation(libs.splashscreen)
     implementation(libs.landscapist.coil)
+    implementation(project(":presentation"))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
