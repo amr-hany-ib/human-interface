@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">resources</string>
+    <string name="review_ur_plan">Review your plan</string>
+    <string name="review_ur_installment_plan">Review your installment plan</string>
+    <string name="installment_plan_details">Installment plan details</string>
+    <string name="amount_to_finance">Amount to finance</string>
+    <string name="downpayment">Downpayment</string>
+    <string name="admin_fees">Admin fees</string>
+    <string name="duration">Duration</string>
+    <string name="monthly_payment">Monthly payment</string>
+    <string name="remaining_credit_limit">Remaining credit limit</string>
+    <string name="scan_qr_code">Scan QR code</string>
+    <string name="input_code_manually">Input Code Manually</string>
+    <string name="show_this_in_store">Show this to your mercchant in-store</string>
+    <string name="tenor_duration">%s months</string>
+    <string name="egp_value">EGP %s</string>
+    <string name="payment_request">Payment request</string>
+    <string name="choose_ur_installment_plane">Choose your installment plan</string>
+    <string name="downpayment_equal">Downpayment = EGP %d</string>
+    <string name="cart_amount_equal">Cart amount = EGP %d</string>
+    <string name="installment_plan_approved">Installment Plan Approved</string>
+    <string name="paid_egp_value">Paid EGP %s</string>
+    <string name="transaction_id">Transaction ID</string>
+    <string name="downpayment_amount">Downpayment Amount</string>
+    <string name="print_receipt">Print receipt</string>
+    <string name="insert_cart_code">Insert cart code</string>
+    <string name="enter_cart_code">Enter cart code</string>
+    <string name="continue_button">Continue</string>
+    <string name="scan_qr_or_input_code">Scan merchants QR code or input the code that appears on their screen manually.</string>
+    <string name="cart_code">Cart code</string>
+    <string name="months">months</string>
+    <string name="egp_per_month">EGP/month</string>
+    <string name="review_cart">Review cart</string>
+    <string name="review_cart_information">Review cart information</string>
+    <string name="quantity_x">%dx</string>
+    <string name="cart_item_value">Cart Item %d</string>
+    <string name="select_ur_plan">Select your plan</string>
+    <string name="down_payment">Down payment</string>
+    <string name="to_be_financed">To be financed</string>
+    <string name="breakdown">Breakdown</string>
+    <string name="see_all">See all</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="empty_activity">You have no activity yet, initiate your first purchase now.</string>
+    <string name="merchants">Merchants</string>
+    <string name="activity">Activity</string>
+    <string name="in_total">In total</string>
+    <string name="new_purchase">New purchase</string>
+    <string name="failed_transaction_title">Failed transaction</string>
+    <string name="failed_transaction_subtitle">Sorry for that! but it seems your transaction has been failed at the moment.</string>
+</resources>

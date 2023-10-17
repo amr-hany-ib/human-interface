@@ -57,6 +57,15 @@ data class HeadingStyle(
             includeFontPadding = false
         )
     ),
+    val headingXl: TextStyle = TextStyle(
+        fontSize = 18.sp,
+        lineHeight = 24.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight.Bold,
+        platformStyle = PlatformTextStyle(
+            includeFontPadding = false
+        )
+    ),
     val headingLg: TextStyle = TextStyle(
         fontFamily = notoSansFontFamily,
         fontSize = 16.sp,

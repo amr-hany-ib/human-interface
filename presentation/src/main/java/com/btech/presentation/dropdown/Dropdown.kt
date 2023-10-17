@@ -1,6 +1,5 @@
 package com.btech.presentation.dropdown
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -8,18 +7,19 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.PopupProperties
 import com.btech.presentation.Lambda
-import com.btech.presentation.R
 import com.btech.presentation.theme.BtechTheme
 
 @Preview
@@ -74,7 +74,8 @@ fun Dropdown(
                     vertical = BtechTheme.spacing.verticalPadding,
                     horizontal = BtechTheme.spacing.horizontalPadding
                 ),
-            horizontalArrangement = Arrangement.SpaceBetween
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
                 text = dropdownTitle,
@@ -82,8 +83,8 @@ fun Dropdown(
             )
 
             Icon(
-                painter = painterResource(id = if (expanded) R.drawable.ic_chevron_up else R.drawable.ic_chevron_down),
-                contentDescription = null
+                imageVector = if (expanded) Icons.Default.KeyboardArrowUp else Icons.Default.KeyboardArrowDown,
+                contentDescription = if (expanded) "Collapse" else "Expand"
             )
         }
 
@@ -92,9 +93,11 @@ fun Dropdown(
             onDismissRequest = onDismissRequest,
             offset = offset,
             properties = properties,
-            modifier = Modifier.background(Color.Unspecified).fillMaxWidth()
+            modifier = modifier.fillMaxWidth()
         ) {
-            content()
+            Column(Modifier.padding(horizontal = BtechTheme.spacing.horizontalPadding)) {
+                content()
+            }
         }
     }
 }

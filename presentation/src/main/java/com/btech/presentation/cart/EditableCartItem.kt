@@ -1,8 +1,6 @@
 package com.btech.presentation.cart
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -10,6 +8,11 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Remove
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -29,7 +32,9 @@ fun EditableCartItemPreview() {
     EditableCartItem(
         title = "Iphone 14 pro max",
         subtitle = "550000",
-        quantity = 1
+        quantity = 1,
+        onAdd = {},
+        onMinus = {}
     )
 }
 
@@ -39,7 +44,9 @@ fun EditableCartItem(
     subtitle: String,
     quantity: Int,
     modifier: Modifier = Modifier,
-    showDivider: Boolean = true
+    showDivider: Boolean = true,
+    onAdd: Lambda,
+    onMinus: Lambda
 ) {
     Column(modifier) {
         Row(
@@ -64,8 +71,8 @@ fun EditableCartItem(
 
             CartItemControls(
                 quantity,
-                onAdd = {},
-                onMinus = {}
+                onAdd = onAdd,
+                onMinus = onMinus
             )
         }
 
@@ -87,23 +94,20 @@ fun CartItemControls(
         modifier = modifier.background(Color(0xFFE2E2E2))
             .heightIn(min = 36.dp)
     ) {
-        Box(
-            Modifier
-                .clickable {
-                    onMinus()
-                }
-                .padding(BtechTheme.spacing.tagVerticalPadding)
-        ) {
-            Image(
-                painter = painterResource(
-                    id = if (quantity == 1) {
+        IconButton(onClick = onMinus) {
+            if (quantity == 1) {
+                Icon(
+                    painter = painterResource(
                         R.drawable.ic_delete
-                    } else {
-                        R.drawable.ic_minus
-                    }
-                ),
-                contentDescription = "delete"
-            )
+                    ),
+                    contentDescription = "delete"
+                )
+            } else {
+                Icon(
+                    imageVector = Icons.Default.Remove,
+                    contentDescription = ""
+                )
+            }
         }
 
         Box(Modifier.padding(BtechTheme.spacing.tagVerticalPadding)) {
@@ -114,15 +118,9 @@ fun CartItemControls(
             )
         }
 
-        Box(
-            Modifier
-                .clickable {
-                    onAdd()
-                }
-                .padding(BtechTheme.spacing.tagVerticalPadding)
-        ) {
-            Image(
-                painter = painterResource(id = R.drawable.ic_plus),
+        IconButton(onClick = onAdd) {
+            Icon(
+                imageVector = Icons.Default.Add,
                 contentDescription = "delete"
             )
         }

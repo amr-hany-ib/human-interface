@@ -3,6 +3,7 @@ package com.btech.presentation.textfield
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Text
@@ -48,7 +49,7 @@ fun PrimaryTextField(
     minLines: Int = 1
 ) {
     Column(
-        Modifier.background(BtechTheme.colors.background.backgroundColor),
+        modifier.background(BtechTheme.colors.background.backgroundColor),
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
         label?.let {
@@ -84,13 +85,17 @@ fun PrimaryTextField(
                 focusedIndicatorColor = Color.Unspecified,
                 unfocusedIndicatorColor = Color.Unspecified
             ),
-            modifier = modifier
+            modifier = Modifier.fillMaxWidth()
         )
         supportingText?.let {
             Text(
                 text = it,
                 style = BtechTheme.typography.utility.headingSm,
-                color = BtechTheme.colors.text.textPrimary
+                color = if (isError) {
+                    BtechTheme.colors.text.textDanger
+                } else {
+                    BtechTheme.colors.text.textPrimary
+                }
             )
         }
     }

@@ -18,6 +18,7 @@ data class BtechColors(
     val background: BackgroundColors = BackgroundColors(),
     val gray: GrayColors = GrayColors(),
     val blue: BlueColors = BlueColors(),
+    val white: WhiteColors = WhiteColors(),
     val accent: AccentColors = AccentColors(),
     val supportColors: SupportColors = SupportColors(),
     val focusColors: FocusColors = FocusColors(),
@@ -31,14 +32,16 @@ data class AccentColors(
 
 data class ActionColors(
     val actionPrimary: Color = Color(0xFF006AFF),
-    val disabledActionPrimary: Color = Color(0xFFE0E0E0)
+    val disabledActionPrimary: Color = Color(0xFFE0E0E0),
+    val actionDanger: Color = Color(0xFFEA3A34)
 )
 
 data class TextColors(
     val textOnColor: Color = Color(0xFFFFFFFF),
     val textOnColorDisabled: Color = Color(0xFFA9A9A9),
     val textPrimary: Color = Color(0xFF1F1F1F),
-    val textPlaceholder: Color = Color(0xFFA9A9A9)
+    val textPlaceholder: Color = Color(0xFFA9A9A9),
+    val textDanger: Color = Color(0xFFEA3A34)
 )
 
 data class FieldColors(
@@ -61,7 +64,12 @@ data class GrayColors(
 
 data class BlueColors(
     val blue200: Color = Color(0xFFCCE1FF),
-    val blue500: Color = Color(0xFF2982FF)
+    val blue500: Color = Color(0xFF2982FF),
+    val blue600: Color = Color(0xFF006AFF)
+)
+
+data class WhiteColors(
+    val white: Color = Color(0xFFFFFFFF)
 )
 
 data class OtpColors(

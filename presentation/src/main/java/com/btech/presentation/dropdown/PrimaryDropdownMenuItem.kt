@@ -1,17 +1,14 @@
 package com.btech.presentation.dropdown
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MenuDefaults
 import androidx.compose.material3.MenuItemColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.unit.dp
 import com.btech.presentation.Lambda
 import com.btech.presentation.theme.BtechTheme
@@ -28,16 +25,14 @@ fun PrimaryDropdownMenuItem(
         textColor = BtechTheme.colors.text.textPrimary
     ),
     contentPadding: PaddingValues = PaddingValues(
-        horizontal = BtechTheme.spacing.horizontalPadding,
+        horizontal = 0.dp,
         vertical = 0.dp
     ),
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }
 ) {
     androidx.compose.material3.DropdownMenuItem(
         contentPadding = contentPadding,
-        modifier = modifier
-            .fillMaxWidth()
-            .background(BtechTheme.colors.layerColors.layerBackground),
+        modifier = modifier,
         text = text,
         onClick = onClick,
         colors = colors,

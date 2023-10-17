@@ -55,6 +55,8 @@ dependencies {
     implementation(libs.splashscreen)
     implementation(libs.landscapist.coil)
 
+    implementation(libs.androidx.material.icons.extended.android)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
