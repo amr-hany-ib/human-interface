@@ -1,7 +1,5 @@
 package com.btech.presentation.cart
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -13,26 +11,32 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.btech.presentation.divider.HorizontalDivider
 import com.btech.presentation.theme.BtechTheme
 
 @Preview(showBackground = true)
 @Composable
 fun CartItemPreview() {
-    CartItem(
-        title = "Iphone 14 pro max",
-        subtitle = "550000",
-        trailingValue = "1"
-    )
+    Column {
+//
+        CartItem(
+            title = "Iphone 14 prohyyyyyyyyyprohyyyyyyyyyprohyyyyyyyyyprohyyyyyyyyyprohyyyyyyyyyprohyyyyyyyyyprohyyyyyyyyy max",
+            subtitle = "550000",
+            trailingValue = "500000"
+        )
+        CartItem(
+            title = "Iphone 14 prohyyyyyyyyyprohyyyyyyyyyprohyyyyyyyyyprohyyyyyyyyyprohyyyyyyyyyprohyyyyyyyyyprohyyyyyyyyy max",
+            subtitle = "550000",
+            trailingValue = "500000"
+        )
+    }
 }
 
 @Composable
 fun CartItem(
     title: String,
-    subtitle: String,
+    subtitle: String?,
     trailingValue: String,
-    modifier: Modifier = Modifier,
-    showDivider: Boolean = true
+    modifier: Modifier = Modifier
 
 ) {
     Column(modifier) {
@@ -40,41 +44,32 @@ fun CartItem(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
                 .fillMaxWidth()
-                .background(BtechTheme.colors.gray.gray100)
                 .padding(
-                    vertical = BtechTheme.spacing.verticalPadding,
                     horizontal = BtechTheme.spacing.tagVerticalPadding
                 )
         ) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = title,
-                    style = BtechTheme.typography.heading.headingLg,
+                    style = BtechTheme.typography.heading.headingMd,
                     color = BtechTheme.colors.text.textPrimary
                 )
-                Text(
-                    text = subtitle,
-                    style = BtechTheme.typography.body.bodyMd,
-                    color = BtechTheme.colors.text.textPrimary
-                )
+                if (subtitle != null && subtitle != "null") {
+                    Text(
+                        text = subtitle,
+                        style = BtechTheme.typography.body.bodyMd,
+                        color = BtechTheme.colors.text.textPrimary
+                    )
+                }
             }
 
             Modifier.width(8.dp)
 
-            Box(
-                modifier = Modifier.background(BtechTheme.colors.gray.gray200)
-                    .padding(BtechTheme.spacing.tagVerticalPadding)
-            ) {
-                Text(
-                    text = trailingValue,
-                    style = BtechTheme.typography.heading.headingLg,
-                    color = BtechTheme.colors.text.textPrimary
-                )
-            }
-        }
-
-        if (showDivider) {
-            HorizontalDivider()
+            Text(
+                text = trailingValue,
+                style = BtechTheme.typography.body.bodyMd,
+                color = BtechTheme.colors.text.textPrimary
+            )
         }
     }
 }

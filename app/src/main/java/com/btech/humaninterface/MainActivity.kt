@@ -3,7 +3,6 @@ package com.btech.humaninterface
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.*
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -103,7 +102,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         CartItem(
             title = "Iphone 14 pro max",
             subtitle = "550000",
-            trailingValue = "1"
+            trailingValue = "500000"
         )
 
         var value by remember { mutableStateOf("") }
