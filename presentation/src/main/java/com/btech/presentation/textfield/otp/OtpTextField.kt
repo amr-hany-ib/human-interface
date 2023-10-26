@@ -1,4 +1,4 @@
-package com.btech.presentation.textfield
+package com.btech.presentation.textfield.otp
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
