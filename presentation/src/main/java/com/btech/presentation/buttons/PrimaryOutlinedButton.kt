@@ -30,7 +30,7 @@ fun PrimaryOutlinedButtonPreview() {
             Icon(
                 imageVector = Icons.Default.Add,
                 contentDescription = null,
-                modifier = Modifier.padding(4.dp).size(16.dp)
+                modifier = Modifier.padding(4.dp).size(BtechTheme.spacing.extraLargePadding)
             )
         }
     )
@@ -40,7 +40,7 @@ fun PrimaryOutlinedButtonPreview() {
 fun PrimaryOutlinedButton(
     text: String,
     modifier: Modifier = Modifier,
-    contentPadding: PaddingValues = PaddingValues(BtechTheme.spacing.verticalPadding),
+    contentPadding: PaddingValues = PaddingValues(horizontal = BtechTheme.spacing.verticalPadding),
     isEnabled: Boolean = true,
     shape: Shape = RectangleShape,
     contentColor: Color = BtechTheme.colors.action.actionPrimary,

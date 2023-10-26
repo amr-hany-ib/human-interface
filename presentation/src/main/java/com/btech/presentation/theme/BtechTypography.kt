@@ -10,8 +10,9 @@ import androidx.compose.ui.unit.sp
 import com.btech.presentation.R
 
 val notoSansFontFamily = FontFamily(
-    Font(R.font.noto_sans, FontWeight.Normal),
-    Font(R.font.noto_sans_bold, FontWeight.Bold)
+    Font(R.font.noto_sans_arabic_regular, FontWeight.Normal),
+    Font(R.font.noto_sans_arabic_semi_bold, FontWeight.SemiBold),
+    Font(R.font.noto_sans_arabic_bold, FontWeight.Bold),
 )
 
 data class BtechTypography(
@@ -24,6 +25,15 @@ data class HeadingStyle(
     val heading7xl: TextStyle = TextStyle(
         fontSize = 42.sp,
         lineHeight = 52.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight.Bold,
+        platformStyle = PlatformTextStyle(
+            includeFontPadding = false
+        )
+    ),
+    val heading5xl: TextStyle = TextStyle(
+        fontSize = 32.sp,
+        lineHeight = 40.sp,
         fontFamily = notoSansFontFamily,
         fontWeight = FontWeight.Bold,
         platformStyle = PlatformTextStyle(
@@ -167,7 +177,7 @@ data class UtilityStyle(
         fontFamily = notoSansFontFamily,
         fontSize = 14.sp,
         lineHeight = 20.sp,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.SemiBold,
         platformStyle = PlatformTextStyle(
             includeFontPadding = false
         )
@@ -176,7 +186,7 @@ data class UtilityStyle(
         fontFamily = notoSansFontFamily,
         fontSize = 12.sp,
         lineHeight = 16.sp,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.SemiBold,
         platformStyle = PlatformTextStyle(
             includeFontPadding = false
         )

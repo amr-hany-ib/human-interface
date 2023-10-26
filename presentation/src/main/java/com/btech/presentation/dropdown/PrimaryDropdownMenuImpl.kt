@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -47,8 +48,8 @@ fun DropdownMenuNoPaddingVertical(
     expanded: Boolean,
     onDismissRequest: () -> Unit,
     modifier: Modifier = Modifier,
-    offset: DpOffset = DpOffset(0.dp, 8.dp),
-    shape: Shape = RectangleShape,
+    offset: DpOffset = DpOffset(BtechTheme.spacing.zeroPadding, BtechTheme.spacing.mediumPadding),
+    shape: Shape = RoundedCornerShape(BtechTheme.spacing.largePadding),
     properties: PopupProperties = PopupProperties(focusable = true),
     content: @Composable ColumnScope.() -> Unit
 ) {
