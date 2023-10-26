@@ -50,7 +50,7 @@ fun ConfirmationDialog(
     ),
     positiveButtonTitle: String = stringResource(id = R.string.confirm),
     negativeButtonTitle: String = stringResource(id = R.string.cancel),
-    contentPadding: PaddingValues = PaddingValues(horizontal = 16.dp),
+    contentPadding: PaddingValues = PaddingValues(horizontal = BtechTheme.spacing.extraLargePadding),
     onPositiveClick: () -> Unit,
     onNegativeClick: () -> Unit
 ) {
@@ -80,7 +80,7 @@ fun ConfirmationDialog(
                     modifier = Modifier.fillMaxWidth()
                 )
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(BtechTheme.spacing.extraLargePadding))
 
                 Text(
                     text = message,

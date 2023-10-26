@@ -4,6 +4,7 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.input.OffsetMapping
 import androidx.compose.ui.text.input.TransformedText
 import androidx.compose.ui.text.input.VisualTransformation
+import com.btech.presentation.common.getDecimalFormat
 import java.text.DecimalFormatSymbols
 
 class NumberFormatVisualTransformation : VisualTransformation {
@@ -36,7 +37,7 @@ private class FixedCursorOffsetMapping(
 }
 
 class DecimalFormatter(
-    symbols: DecimalFormatSymbols = DecimalFormatSymbols.getInstance()
+    symbols: DecimalFormatSymbols = getDecimalFormat().decimalFormatSymbols
 ) {
 
     private val thousandsSeparator = symbols.groupingSeparator
