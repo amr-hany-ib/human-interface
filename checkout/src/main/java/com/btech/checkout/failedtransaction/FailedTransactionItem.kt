@@ -29,7 +29,7 @@ fun FailedTransactionItem(modifier: Modifier = Modifier) {
             contentDescription = null
         )
 
-        Spacer(Modifier.height(16.dp))
+        Spacer(Modifier.height(BtechTheme.spacing.extraLargePadding))
 
         Text(
             text = stringResource(id = R.string.failed_transaction_title),

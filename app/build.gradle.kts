@@ -71,6 +71,7 @@ dependencies {
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
     implementation(platform(libs.compose.bom))
+    implementation("androidx.compose.ui:ui:1.6.0-alpha08")
     implementation(libs.ui)
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)

@@ -46,7 +46,7 @@ fun MerchantOfferCard(
     ) {
         Row(
             Modifier
-                .padding(16.dp)
+                .padding(BtechTheme.spacing.extraLargePadding)
                 .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween

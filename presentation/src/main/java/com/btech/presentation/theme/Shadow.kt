@@ -26,7 +26,7 @@ fun ShadowPreview() {
         verticalArrangement = Arrangement.spacedBy(10.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(BtechTheme.spacing.extraLargePadding))
         Surface(
             color = Color.White,
             modifier = Modifier

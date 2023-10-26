@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.btech.checkout.common.components.RoundedBox
 import com.btech.presentation.Lambda
+import com.btech.presentation.theme.BtechTheme
 
 @Preview
 @Composable
@@ -35,12 +36,12 @@ fun MerchantRow(
 ) {
     RoundedBox(
         modifier = modifier,
-        paddingValues = PaddingValues(16.dp)
+        paddingValues = PaddingValues(BtechTheme.spacing.extraLargePadding)
     ) {
         Row(
             Modifier
                 .fillMaxWidth()
-                .padding(vertical = 16.dp),
+                .padding(vertical = BtechTheme.spacing.extraLargePadding),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {

@@ -45,7 +45,7 @@ fun NewPurchaseButton(
                 horizontal = 14.dp
             ),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+        verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.extraLargePadding)
     ) {
         Image(
             painter = painterResource(

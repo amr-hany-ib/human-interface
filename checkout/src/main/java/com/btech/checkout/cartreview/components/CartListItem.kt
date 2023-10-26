@@ -39,7 +39,7 @@ fun CartListItem(
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween,
-            modifier = Modifier.fillMaxWidth().padding(vertical = 16.dp)
+            modifier = Modifier.fillMaxWidth().padding(vertical = BtechTheme.spacing.extraLargePadding)
         ) {
             Text(
                 text = title,
