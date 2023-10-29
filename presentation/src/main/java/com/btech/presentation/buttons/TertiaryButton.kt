@@ -1,6 +1,8 @@
 package com.btech.presentation.buttons
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -16,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.btech.presentation.Lambda
 import com.btech.presentation.dashedBorder
@@ -28,6 +31,7 @@ fun TertiaryButton(
     contentPadding: PaddingValues = PaddingValues(horizontal = BtechTheme.spacing.verticalPadding),
     isEnabled: Boolean = true,
     shape: Shape = RoundedCornerShape(100),
+    minHeight: Dp = BtechTheme.spacing.buttonMinHeight,
     colors: ButtonColors = ButtonDefaults.outlinedButtonColors(
         containerColor = Color.Unspecified,
         contentColor = BtechTheme.colors.text.textPrimary,
@@ -58,25 +62,64 @@ fun TertiaryButton(
             2.dp,
             BtechTheme.colors.borderColors.borderSubtle,
             shape,
-            12.dp,
-            12.dp
-        )
+            BtechTheme.spacing.largePadding,
+            BtechTheme.spacing.largePadding
+        ).heightIn(min = minHeight)
     )
 }
 
 @Preview
 @Composable
 fun TertiaryButtonPreview() {
+    Column() {
+        TertiaryButton(
+            isEnabled = false,
+            text = "Preview",
+            onClick = {},
+            trailingContent = {
+                Icon(
+                    imageVector = Icons.Default.Add,
+                    contentDescription = null,
+                    modifier = Modifier.padding(4.dp).size(BtechTheme.spacing.extraLargePadding)
+                )
+            }
+        )
+        InactiveTertiaryButton(
+            text = "Preview",
+            trailingContent = {
+                Icon(
+                    imageVector = Icons.Default.Add,
+                    contentDescription = null,
+                    modifier = Modifier.padding(4.dp).size(BtechTheme.spacing.extraLargePadding)
+                )
+            }
+        )
+    }
+}
+
+@Composable
+fun InactiveTertiaryButton(
+    text: String,
+    modifier: Modifier = Modifier,
+    contentPadding: PaddingValues = PaddingValues(horizontal = BtechTheme.spacing.verticalPadding),
+    shape: Shape = RoundedCornerShape(100),
+    minHeight: Dp = BtechTheme.spacing.buttonMinHeight,
+    trailingContent: @Composable Lambda? = null
+) {
     TertiaryButton(
-        isEnabled = false,
-        text = "Preview",
+        text = text,
         onClick = {},
-        trailingContent = {
-            Icon(
-                imageVector = Icons.Default.Add,
-                contentDescription = null,
-                modifier = Modifier.padding(4.dp).size(BtechTheme.spacing.extraLargePadding)
-            )
-        }
+        isEnabled = false,
+        contentPadding = contentPadding,
+        shape = shape,
+        colors = ButtonDefaults.outlinedButtonColors(
+            containerColor = Color.Unspecified,
+            contentColor = BtechTheme.colors.text.textPrimary,
+            disabledContainerColor = Color.Unspecified,
+            disabledContentColor = BtechTheme.colors.text.textPrimary
+        ),
+        trailingContent = trailingContent,
+        modifier = modifier,
+        minHeight = minHeight
     )
 }

@@ -116,12 +116,7 @@ fun CollapsingHeader(
     Surface(
         color = surfaceColor
     ) {
-        Column(
-            modifier = Modifier
-                .clickable(
-                    onClick = onClick,
-                )
-        ) {
+        Column(modifier = Modifier.clickable(onClick = onClick)) {
             Row(
                 modifier = modifier
                     .fillMaxWidth()

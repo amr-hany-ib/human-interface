@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -41,6 +42,7 @@ fun PrimaryTextField(
     value: String,
     onValueChange: StringLambda,
     modifier: Modifier = Modifier,
+    textStyle: TextStyle = BtechTheme.typography.body.bodyMd,
     leadingIcon: @Composable (() -> Unit)? = null,
     trailingIcon: @Composable (() -> Unit)? = null,
     placeholderText: String? = null,
@@ -70,6 +72,7 @@ fun PrimaryTextField(
             value = value,
             onValueChange = onValueChange,
             leadingIcon = leadingIcon,
+            textStyle = textStyle,
             trailingIcon = {
                 if (isError) {
                     errorIcon()

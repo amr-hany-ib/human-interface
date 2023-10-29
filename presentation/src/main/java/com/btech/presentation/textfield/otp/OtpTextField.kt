@@ -8,10 +8,12 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.text.isDigitsOnly
+import com.btech.presentation.theme.BtechTheme
 
 @Preview(showBackground = true)
 @Composable
@@ -24,14 +26,16 @@ fun PreviewOtpTextField() {
 
 @Composable
 fun OtpTextField(
-    modifier: Modifier = Modifier,
     text: String,
+    modifier: Modifier = Modifier,
+    textStyle: TextStyle = BtechTheme.typography.body.bodyMd,
     otpCount: Int = 6,
     keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
     onValueChange: (String) -> Unit
 ) {
     BasicTextField(
         value = text,
+        textStyle = textStyle,
         onValueChange = {
             if (it.length <= otpCount && it.isDigitsOnly()) {
                 onValueChange(it)

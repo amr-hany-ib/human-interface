@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.btech.checkout.R
@@ -37,14 +36,12 @@ fun OfferBreakdown(
     adminFees: String,
     modifier: Modifier = Modifier
 ) {
-    val context = LocalContext.current
-
     Column(modifier) {
         HorizontalDivider()
 
         Spacer(Modifier.height(BtechTheme.spacing.extraLargePadding))
 
-        Column(verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.extraSmallPadding)) {
+        Column(verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.smallPadding)) {
             TextListItem(
                 title = stringResource(id = R.string.amount_to_be_financed),
                 label = financedAmount
@@ -74,6 +71,8 @@ fun OfferBreakdown(
                 title = stringResource(id = R.string.admin_fees),
                 label = adminFees
             )
+
+            Spacer(Modifier.height(BtechTheme.spacing.extraSmallPadding))
         }
     }
 }

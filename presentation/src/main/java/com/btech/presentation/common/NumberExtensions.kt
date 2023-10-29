@@ -1,6 +1,5 @@
 package com.btech.presentation.common
 
-import android.icu.text.CompactDecimalFormat
 import java.lang.ClassCastException
 import java.math.BigDecimal
 import java.text.DecimalFormat
@@ -9,7 +8,7 @@ import java.util.Locale
 
 fun Number.formatNumber(): String {
     return try {
-        CompactDecimalFormat.getInstance().format(this)
+        getDecimalFormat().format(this)
     } catch (e: NumberFormatException) {
         this.toString()
     } catch (e: ClassCastException) {
@@ -36,16 +35,13 @@ fun String.formatPoundsToCents(): Int {
     return ((dec.parse(this) ?: 0f).toDouble() * 100).toInt()
 }
 
-fun getDecimalFormat(): DecimalFormat {
+fun getDecimalFormat(pattern: String = "#,##0.00"): DecimalFormat {
     val decimalSymbol = DecimalFormatSymbols()
-
+    decimalSymbol.decimalSeparator = '.'
     if (Locale.getDefault().language == "ar") {
-        decimalSymbol.decimalSeparator = ','
         decimalSymbol.groupingSeparator = '،'
-    } else {
-        decimalSymbol.decimalSeparator = '.'
     }
-    val decimalFormat = DecimalFormat("#,##0.00")
+    val decimalFormat = DecimalFormat(pattern)
     decimalFormat.decimalFormatSymbols = decimalSymbol
     return decimalFormat
 }

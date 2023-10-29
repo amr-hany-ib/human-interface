@@ -38,4 +38,6 @@
     <string name="total_interest">Total interest</string>
     <string name="total_of_x_payments">Total of %d payments</string>
     <string name="for_x_duration">for %d %s</string>
+    <string name="successful_transaction_title">Order Success</string>
+    <string name="successful_transaction_subtitle">Thank you for trusting OL\nYou can now claim your product from the merchant.</string>
 </resources>

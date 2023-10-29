@@ -12,13 +12,26 @@ import com.btech.presentation.R
 val notoSansFontFamily = FontFamily(
     Font(R.font.noto_sans_arabic_regular, FontWeight.Normal),
     Font(R.font.noto_sans_arabic_semi_bold, FontWeight.SemiBold),
-    Font(R.font.noto_sans_arabic_bold, FontWeight.Bold),
+    Font(R.font.noto_sans_arabic_bold, FontWeight.Bold)
 )
 
 data class BtechTypography(
+    val display: DisplayStyle = DisplayStyle(),
     val heading: HeadingStyle = HeadingStyle(),
     val body: BodyStyle = BodyStyle(),
     val utility: UtilityStyle = UtilityStyle()
+)
+
+data class DisplayStyle(
+    val displayMd: TextStyle = TextStyle(
+        fontSize = 60.sp,
+        lineHeight = 66.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight.Bold,
+        platformStyle = PlatformTextStyle(
+            includeFontPadding = false
+        )
+    )
 )
 
 data class HeadingStyle(

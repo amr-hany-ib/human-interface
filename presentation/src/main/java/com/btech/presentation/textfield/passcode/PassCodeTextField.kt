@@ -11,6 +11,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -22,8 +23,9 @@ import com.btech.presentation.theme.BtechTheme
 
 @Composable
 fun PassCodeTextField(
-    modifier: Modifier = Modifier,
     text: String,
+    textStyle: TextStyle = BtechTheme.typography.body.bodyMd,
+    modifier: Modifier = Modifier,
     otpCount: Int = 6,
     isError: Boolean = false,
     keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
@@ -37,6 +39,7 @@ fun PassCodeTextField(
     })
     BasicTextField(
         value = text,
+        textStyle = textStyle,
         onValueChange = {
             if (it.length <= otpCount && it.isDigitsOnly()) {
                 onValueChange(it)
