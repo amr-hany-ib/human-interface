@@ -60,8 +60,8 @@ fun OfferTag(
             ),
             style = TextStyle(
                 fontFamily = notoSansFontFamily,
-                fontSize = 8.sp,
-                lineHeight = 10.sp,
+                fontSize = 10.sp,
+                lineHeight = 10.16.sp,
                 fontWeight = FontWeight.Bold,
                 platformStyle = PlatformTextStyle(
                     includeFontPadding = false
