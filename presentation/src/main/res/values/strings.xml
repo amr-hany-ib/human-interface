@@ -6,4 +6,7 @@
     <string name="bottom_navbar_scan">Scan</string>
     <string name="bottom_navbar_account">Account</string>
     <string name="bottom_navbar_new_purchase">New purchase</string>
+    <string name="confirmation_popup_decline">No</string>
+    <string name="confirmation_popup_confirm">Yes</string>
+    <string name="no_internet_message">\"No Internet\"</string>
 </resources>

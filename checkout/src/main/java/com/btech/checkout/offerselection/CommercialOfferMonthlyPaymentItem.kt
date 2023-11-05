@@ -1,4 +1,4 @@
-package com.btech.checkout.offerselection.components.offer
+package com.btech.checkout.offerselection
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -49,7 +49,7 @@ fun DifferentSizingPrice(
     supportingTextStyle: TextStyle = BtechTheme.typography.heading.headingMd,
     delimiter: String = "."
 ) {
-    val splitDecimal = amount.split(".")
+    val splitDecimal = amount.split(delimiter)
 
     val annotatedString =
         buildAnnotatedString {

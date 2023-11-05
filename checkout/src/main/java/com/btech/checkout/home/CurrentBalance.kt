@@ -1,4 +1,4 @@
-package com.btech.checkout.home.component
+package com.btech.checkout.home
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.btech.checkout.R
-import com.btech.checkout.common.components.RoundedBox
+import com.btech.checkout.common.RoundedBox
 import com.btech.presentation.theme.BtechTheme
 
 @Preview

@@ -1,4 +1,4 @@
-package com.btech.checkout.home.component
+package com.btech.checkout.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -19,7 +19,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.btech.checkout.common.components.RoundedBox
+import com.btech.checkout.common.RoundedBox
 import com.btech.presentation.Lambda
 import com.btech.presentation.theme.BtechTheme
 

@@ -1,4 +1,4 @@
-package com.btech.checkout.cartreview.components
+package com.btech.checkout.cartreview
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

@@ -1,4 +1,4 @@
-package com.btech.checkout.home.component
+package com.btech.checkout.home
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.material3.Button

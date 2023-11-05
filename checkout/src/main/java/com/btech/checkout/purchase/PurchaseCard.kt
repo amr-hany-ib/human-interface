@@ -1,4 +1,4 @@
-package com.btech.checkout.purchase.components
+package com.btech.checkout.purchase
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement

@@ -1,4 +1,4 @@
-package com.btech.checkout.offerselection.components
+package com.btech.checkout.offerselection
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

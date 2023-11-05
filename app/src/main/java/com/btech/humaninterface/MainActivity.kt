@@ -3,18 +3,27 @@ package com.btech.humaninterface
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
-import com.btech.checkout.offerselection.components.offer.CommercialOfferMonthlyPaymentItem
+import com.btech.checkout.common.Header
+import com.btech.checkout.offerselection.CommercialOfferMonthlyPaymentItem
 import com.btech.humaninterface.ui.theme.HumanInterfaceTheme
 import com.btech.presentation.common.getDecimalFormat
+import com.btech.presentation.text.AnnotatedClickableText
+import com.btech.presentation.theme.BtechTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +35,33 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    Header(
+                        title = "sflksjkfsjdfl",
+                        subtitle = {
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                modifier = Modifier.fillMaxWidth()
+                            ) {
+                                AnnotatedClickableText(
+                                    text = "sdlfhslkfjslkdfj",
+                                    clickableText = "sdfjshjfhs",
+                                    textStyle = BtechTheme.typography.body.bodyMd.copy(
+                                        textAlign = TextAlign.Center,
+                                        color = BtechTheme.colors.text.textPrimary
+                                    ),
+                                    clickableTextStyle = BtechTheme.typography.body.bodyMd.copy(
+                                        textAlign = TextAlign.Center,
+                                        textDecoration = TextDecoration.Underline
+                                    )
+                                ) {
+                                }
+                            }
+                        },
+                        contentPadding = PaddingValues(),
+                        titleStyle = BtechTheme.typography.heading.heading4xl.copy(textAlign = TextAlign.Center)
+                    )
+
+                    // Greeting("Android")
                 }
             }
         }

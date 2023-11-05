@@ -1,4 +1,4 @@
-package com.btech.checkout.offerselection.components.offer
+package com.btech.checkout.offerselection
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
@@ -17,6 +17,7 @@ import androidx.compose.ui.text.PlatformTextStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.btech.checkout.R
@@ -26,22 +27,25 @@ import com.btech.presentation.theme.notoSansFontFamily
 @Composable
 fun OfferTag(
     downPaymentAmount: String,
-    tagColor: Color = BtechTheme.colors.tagColors.tagGray.tagGrayBackground,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    tagColor: Color = BtechTheme.colors.tagColors.tagYellowBackground
 ) {
     Row(
         modifier
             .clip(RoundedCornerShape(100))
             .background(tagColor)
-            .padding(vertical = 6.dp, horizontal = 10.dp),
+            .padding(
+                vertical = BtechTheme.spacing.mediumPadding,
+                horizontal = BtechTheme.spacing.extraLargePadding
+            ),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
             text = stringResource(id = R.string.down_payment),
             style = TextStyle(
                 fontFamily = notoSansFontFamily,
-                fontSize = 8.sp,
-                lineHeight = 10.sp,
+                fontSize = 10.sp,
+                lineHeight = 10.16.sp,
                 fontWeight = FontWeight.Normal,
                 platformStyle = PlatformTextStyle(
                     includeFontPadding = false
@@ -71,4 +75,10 @@ fun OfferTag(
             textAlign = TextAlign.Center
         )
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun OfferTag() {
+    OfferTag(downPaymentAmount = "3000")
 }

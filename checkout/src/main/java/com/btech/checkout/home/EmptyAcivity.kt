@@ -1,4 +1,4 @@
-package com.btech.checkout.home.component
+package com.btech.checkout.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -14,7 +14,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.btech.checkout.R
-import com.btech.checkout.common.components.RoundedBox
+import com.btech.checkout.common.RoundedBox
 import com.btech.presentation.theme.BtechTheme
 
 @Preview

@@ -35,6 +35,15 @@ data class DisplayStyle(
 )
 
 data class HeadingStyle(
+    val heading8xl: TextStyle = TextStyle(
+        fontSize = 48.sp,
+        lineHeight = 54.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight.Bold,
+        platformStyle = PlatformTextStyle(
+            includeFontPadding = false
+        )
+    ),
     val heading7xl: TextStyle = TextStyle(
         fontSize = 42.sp,
         lineHeight = 52.sp,

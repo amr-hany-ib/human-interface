@@ -1,4 +1,4 @@
-package com.btech.checkout.common.components
+package com.btech.checkout.common
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

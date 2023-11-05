@@ -1,4 +1,4 @@
-package com.btech.checkout.common.components
+package com.btech.checkout.common
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box

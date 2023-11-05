@@ -1,4 +1,4 @@
-package com.btech.checkout.offerselection.components.offer
+package com.btech.checkout.offerselection
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -72,8 +71,7 @@ fun CommercialOffer(
             .clickable {
                 onSelection()
             }
-            .padding(horizontal = 16.dp, vertical = 12.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+            .padding(horizontal = 16.dp, vertical = 12.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -82,26 +80,22 @@ fun CommercialOffer(
         ) {
             CommercialOfferMonthlyPaymentItem(amount = payment)
 
-            Column(
-                horizontalAlignment = Alignment.End
-            ) {
-                Text(
-                    text = stringResource(
-                        id = R.string.for_x_duration,
-                        formatArgs = arrayOf(tenure, tenureDuration)
-                    ),
-                    style = BtechTheme.typography.body.bodySm,
-                    color = BtechTheme.colors.text.textPrimary,
-                    textAlign = TextAlign.Center
-                )
-
-                Spacer(Modifier.height(10.dp))
-
-                OfferTag(downPaymentAmount = downPayment)
-            }
+            Text(
+                text = stringResource(
+                    id = R.string.for_x_duration,
+                    formatArgs = arrayOf(tenure, tenureDuration)
+                ),
+                style = BtechTheme.typography.body.bodySm,
+                color = BtechTheme.colors.text.textPrimary,
+                textAlign = TextAlign.Center
+            )
         }
 
-        Spacer(Modifier.height(10.dp))
+        Spacer(Modifier.height(BtechTheme.spacing.hugePadding))
+
+        OfferTag(downPaymentAmount = downPayment)
+
+        Spacer(Modifier.height(BtechTheme.spacing.largePadding))
 
         HorizontalDivider()
 

@@ -1,4 +1,4 @@
-package com.btech.checkout.presentation.cartreview.components
+package com.btech.checkout.cartreview
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import com.btech.checkout.R
-import com.btech.checkout.common.components.CoilImageLoader
+import com.btech.checkout.common.CoilImageLoader
 import com.btech.presentation.theme.BtechTheme
 import com.skydoves.landscapist.coil.CoilImage
 

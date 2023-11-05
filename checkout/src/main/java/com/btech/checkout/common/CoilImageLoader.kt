@@ -1,4 +1,4 @@
-package com.btech.checkout.common.components
+package com.btech.checkout.common
 
 import android.content.Context
 import coil.ImageLoader

@@ -26,9 +26,9 @@ fun PassCodeCharacter(
             .background(
                 color = if (isFilled) {
                     if (isError) {
-                        BtechTheme.colors.action.actionDanger
+                        BtechTheme.colors.background.backgroundColor
                     } else {
-                        BtechTheme.colors.background.backgroundInverse
+                        BtechTheme.colors.action.actionPrimary
                     }
                 } else {
                     BtechTheme.colors.background.backgroundColor
@@ -38,7 +38,11 @@ fun PassCodeCharacter(
             .border(
                 width = 2.dp,
                 color =
-                BtechTheme.colors.borderColors.borderInteractive,
+                if (isError) {
+                    BtechTheme.colors.action.actionDanger
+                } else {
+                    BtechTheme.colors.borderColors.borderInteractive
+                },
                 shape = CircleShape
             )
             .clip(CircleShape)

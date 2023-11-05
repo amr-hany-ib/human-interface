@@ -1,4 +1,4 @@
-package com.btech.checkout.home.component
+package com.btech.checkout.home
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -41,6 +42,100 @@ fun PrimaryTextFieldPreview() {
 fun PrimaryTextField(
     value: String,
     onValueChange: StringLambda,
+    modifier: Modifier = Modifier,
+    textStyle: TextStyle = BtechTheme.typography.body.bodyMd,
+    leadingIcon: @Composable (() -> Unit)? = null,
+    trailingIcon: @Composable (() -> Unit)? = null,
+    placeholderText: String? = null,
+    label: String? = null,
+    supportingText: String? = null,
+    isError: Boolean = false,
+    shape: Shape = RoundedCornerShape(12.dp),
+    visualTransformation: VisualTransformation = VisualTransformation.None,
+    keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
+    keyboardActions: KeyboardActions = KeyboardActions.Default,
+    singleLine: Boolean = false,
+    maxLines: Int = if (singleLine) 1 else Int.MAX_VALUE,
+    minLines: Int = 1
+) {
+    Column(
+        modifier.background(BtechTheme.colors.background.backgroundColor),
+        verticalArrangement = Arrangement.spacedBy(4.dp)
+    ) {
+        label?.let {
+            Text(
+                text = it,
+                style = BtechTheme.typography.utility.headingSm,
+                color = BtechTheme.colors.text.textPrimary
+            )
+        }
+        TextField(
+            value = value,
+            onValueChange = onValueChange,
+            leadingIcon = leadingIcon,
+            textStyle = textStyle,
+            trailingIcon = {
+                if (isError) {
+                    errorIcon()
+                } else {
+                    trailingIcon?.let { it() }
+                }
+            },
+            placeholder = {
+                placeholderText?.let {
+                    Text(
+                        text = placeholderText,
+                        style = BtechTheme.typography.body.bodyMd,
+                        color = BtechTheme.colors.text.textPlaceholder
+                    )
+                }
+            },
+            isError = isError,
+            minLines = minLines,
+            maxLines = maxLines,
+            keyboardActions = keyboardActions,
+            keyboardOptions = keyboardOptions,
+            visualTransformation = visualTransformation,
+            shape = shape,
+            colors = TextFieldDefaults.colors(
+                focusedContainerColor = BtechTheme.colors.field.fieldBackground,
+                unfocusedContainerColor = BtechTheme.colors.field.fieldBackground,
+                focusedIndicatorColor = Color.Unspecified,
+                unfocusedIndicatorColor = Color.Unspecified,
+                errorIndicatorColor = Color.Unspecified,
+                errorContainerColor = BtechTheme.colors.field.fieldBackground,
+                errorSupportingTextColor = BtechTheme.colors.text.textDanger,
+                errorTrailingIconColor = BtechTheme.colors.text.textDanger
+            ),
+            modifier = Modifier.fillMaxWidth()
+                .border(
+                    2.dp,
+                    if (isError) {
+                        BtechTheme.colors.text.textDanger
+                    } else {
+                        Color.Unspecified
+                    },
+                    shape
+                )
+        )
+        supportingText?.let {
+            Text(
+                text = it,
+                style = BtechTheme.typography.utility.utilitySm,
+                color = if (isError) {
+                    BtechTheme.colors.text.textDanger
+                } else {
+                    BtechTheme.colors.text.textPrimary
+                }
+            )
+        }
+    }
+}
+
+@Composable
+fun PrimaryTextField(
+    value: TextFieldValue,
+    onValueChange: (TextFieldValue) -> Unit,
     modifier: Modifier = Modifier,
     textStyle: TextStyle = BtechTheme.typography.body.bodyMd,
     leadingIcon: @Composable (() -> Unit)? = null,
