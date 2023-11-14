@@ -6,11 +6,14 @@ import androidx.compose.ui.unit.dp
 
 data class BtechSpacing(
     val zeroPadding: Dp = 0.dp,
+    val tinyPadding: Dp = 2.dp,
+    val tinyLoadingIndicatorThickness: Dp = 3.dp,
     val extraSmallPadding: Dp = 4.dp,
     val smallPadding: Dp = 6.dp,
     val mediumPadding: Dp = 8.dp,
     val largePadding: Dp = 12.dp,
     val extraLargePadding: Dp = 16.dp,
+    val tinyLoadingIndicatorSize: Dp = 20.dp,
     val hugePadding: Dp = 24.dp,
     val extraHugePadding: Dp = 32.dp,
     val circularProgressPadding: Dp = 88.dp,

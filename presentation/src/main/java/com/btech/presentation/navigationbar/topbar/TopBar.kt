@@ -38,7 +38,8 @@ fun TopBar(
     actionText: String = stringResource(id = R.string.cancel),
     actions: @Composable RowScope.() -> Unit = {},
     colors: TopAppBarColors = TopAppBarDefaults.topAppBarColors(
-        containerColor = MaterialTheme.colorScheme.background
+        containerColor = MaterialTheme.colorScheme.background,
+        actionIconContentColor = BtechTheme.colors.action.actionPrimary
     ),
     showSpacer: Boolean = false,
     onBackClick: Lambda
@@ -52,7 +53,8 @@ fun TopBar(
                 Text(
                     text = actionText,
                     modifier = Modifier.clickable { onBackClick() },
-                    style = BtechTheme.typography.body.bodyMd
+                    style = BtechTheme.typography.body.bodyMd,
+                    color = BtechTheme.colors.action.actionPrimary
                 )
             },
             modifier = modifier

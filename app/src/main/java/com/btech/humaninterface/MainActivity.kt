@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     Header(
-                        title = "sflksjkfsjdfl",
+                        title = "المتابعة",
                         subtitle = {
                             Column(
                                 horizontalAlignment = Alignment.CenterHorizontally,

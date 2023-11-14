@@ -14,6 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.btech.presentation.IntLambda
+import com.btech.presentation.divider.HorizontalDivider
 import com.btech.presentation.theme.BtechTheme
 
 @Preview(showBackground = true)
@@ -40,9 +41,10 @@ fun BottomBar(
             Column(
                 Modifier.weight(1f)
             ) {
+                HorizontalDivider()
                 TabRowDefaults.Indicator(
                     color = if (isSelected) {
-                        BtechTheme.colors.text.textPrimary
+                        BtechTheme.colors.action.actionPrimary
                     } else {
                         Color.Unspecified
                     },
@@ -54,7 +56,11 @@ fun BottomBar(
                     text = {
                         Text(
                             text = stringResource(id = destination.labelResource),
-                            color = BtechTheme.colors.text.textPrimary,
+                            color = if (isSelected) {
+                                BtechTheme.colors.action.actionPrimary
+                            } else {
+                                BtechTheme.colors.text.textPrimary
+                            },
                             style = BtechTheme.typography.utility.utilitySm
                         )
                     },
@@ -62,7 +68,11 @@ fun BottomBar(
                         Icon(
                             painter = painterResource(id = destination.getSelectedIcon(isSelected)),
                             contentDescription = null,
-                            tint = BtechTheme.colors.text.textPrimary
+                            tint = if (isSelected) {
+                                BtechTheme.colors.action.actionPrimary
+                            } else {
+                                BtechTheme.colors.text.textPrimary
+                            }
                         )
                     }
                 )

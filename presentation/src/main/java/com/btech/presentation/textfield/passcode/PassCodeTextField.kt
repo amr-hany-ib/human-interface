@@ -14,6 +14,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
@@ -32,7 +33,10 @@ fun PassCodeTextField(
     textStyle: TextStyle = BtechTheme.typography.body.bodyMd,
     otpCount: Int = 6,
     isError: Boolean = false,
-    keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+    keyboardOptions: KeyboardOptions = KeyboardOptions(
+        keyboardType = KeyboardType.Number,
+        imeAction = ImeAction.Done
+    ),
     onValueChange: (String) -> Unit
 ) {
     val shakeController = rememberShakeController()
@@ -98,7 +102,10 @@ fun PassCodeTextField(
     textStyle: TextStyle = BtechTheme.typography.body.bodyMd,
     otpCount: Int = 6,
     isError: Boolean = false,
-    keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+    keyboardOptions: KeyboardOptions = KeyboardOptions(
+        keyboardType = KeyboardType.Number,
+        imeAction = ImeAction.Done
+    ),
     onValueChange: (TextFieldValue) -> Unit
 ) {
     val shakeController = rememberShakeController()

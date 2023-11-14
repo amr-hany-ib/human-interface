@@ -56,7 +56,8 @@ fun OtpCharacter(
                 textAlign = TextAlign.Center,
                 modifier = Modifier.align(Alignment.Center),
                 softWrap = false,
-                style = textStyle
+                style = textStyle,
+                color = BtechTheme.colors.action.actionPrimary
             )
         }
     }

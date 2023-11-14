@@ -4,7 +4,6 @@
     <string name="admin_fees">Admin fees</string>
     <string name="duration">Duration</string>
     <string name="egp_value">EGP %s</string>
-    <string name="payment_request">Payment request</string>
     <string name="paid_egp_value">Paid EGP %s</string>
     <string name="transaction_id">Transaction ID</string>
     <string name="downpayment_amount">Downpayment Amount</string>
@@ -40,4 +39,6 @@
     <string name="for_x_duration">for %d %s</string>
     <string name="successful_transaction_title">Order Success</string>
     <string name="successful_transaction_subtitle">Thank you for trusting OL\nYou can now claim your product from the merchant.</string>
+    <string name="awaiting_authorization">Awaiting Authorization</string>
+    <string name="awaiting_authorization_message">Waiting for your customer to authorize the payment.</string>
 </resources>

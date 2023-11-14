@@ -12,15 +12,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.btech.presentation.Lambda
 import com.btech.presentation.divider.HorizontalDivider
 import com.btech.presentation.theme.BtechTheme
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun HeaderPreview() {
     Header(
-        title = "Payment request",
+        title = "ادخل رمز عربة التسوق",
         subtitle = "Choose your installment plan"
     )
 }
@@ -37,7 +38,9 @@ fun Header(
 ) {
     Column(modifier) {
         Column(
-            modifier = Modifier.padding(contentPadding),
+            modifier = Modifier
+                .padding(contentPadding)
+                .padding(vertical = BtechTheme.spacing.tinyPadding),
             verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.largePadding)
         ) {
             Text(

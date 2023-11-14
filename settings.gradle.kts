@@ -17,3 +17,4 @@ rootProject.name = "Human Interface"
 include(":app")
 include(":presentation")
 include(":checkout")
+include(":authentication")

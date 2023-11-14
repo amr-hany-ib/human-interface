@@ -34,7 +34,7 @@ fun TertiaryButton(
     minHeight: Dp = BtechTheme.spacing.buttonMinHeight,
     colors: ButtonColors = ButtonDefaults.outlinedButtonColors(
         containerColor = Color.Unspecified,
-        contentColor = BtechTheme.colors.text.textPrimary,
+        contentColor = BtechTheme.colors.action.actionPrimary,
         disabledContainerColor = Color.Unspecified,
         disabledContentColor = BtechTheme.colors.text.textOnColorDisabled
     ),
@@ -114,7 +114,7 @@ fun InactiveTertiaryButton(
         shape = shape,
         colors = ButtonDefaults.outlinedButtonColors(
             containerColor = Color.Unspecified,
-            contentColor = BtechTheme.colors.text.textPrimary,
+            contentColor = BtechTheme.colors.action.actionPrimary,
             disabledContainerColor = Color.Unspecified,
             disabledContentColor = BtechTheme.colors.text.textPrimary
         ),

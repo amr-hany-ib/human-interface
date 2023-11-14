@@ -1,12 +1,10 @@
 package com.btech.presentation.text
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.AnnotatedString
-import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
@@ -73,5 +71,26 @@ fun buildClickableString(
             append(clickableText)
         }
         pop()
+    }
+}
+
+fun buildCustomizableStyleString(
+    text: String,
+    customizableText: String,
+    textStyle: TextStyle,
+    customizableTextStyle: TextStyle
+): AnnotatedString {
+    return buildAnnotatedString {
+        withStyle(
+            style = textStyle.toSpanStyle()
+        ) {
+            append(text)
+        }
+
+        addStyle(
+            style = customizableTextStyle.toSpanStyle(),
+            start = text.indexOf(customizableText).coerceAtLeast(0),
+            end = text.indexOf(customizableText) + customizableText.length
+        )
     }
 }

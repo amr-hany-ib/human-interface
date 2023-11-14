@@ -160,12 +160,7 @@ fun PurchaseCardHeader(
             )
             Column() {
                 Text(
-                    text = stringResource(
-                        id = R.string.paid_egp_value,
-                        formatArgs = arrayOf(
-                            paidAmount
-                        )
-                    ),
+                    text = "Paid Egp 2500",
                     style = BtechTheme.typography.heading.headingLg
                 )
 

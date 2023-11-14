@@ -10,6 +10,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
@@ -36,15 +37,21 @@ fun OtpTextField(
     isError: Boolean = false,
     textStyle: TextStyle = BtechTheme.typography.heading.heading8xl,
     otpCount: Int = 6,
-    keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+    keyboardOptions: KeyboardOptions = KeyboardOptions(
+        keyboardType = KeyboardType.Number,
+        imeAction = ImeAction.Done
+    ),
     onValueChange: (String) -> Unit
 ) {
     val shakeController = rememberShakeController()
-    LaunchedEffect(key1 = isError, block = {
-        if (isError) {
-            shakeController.shake(ShakeConfig(10, translateX = 5f))
+    LaunchedEffect(
+        key1 = isError,
+        block = {
+            if (isError) {
+                shakeController.shake(ShakeConfig(10, translateX = 5f))
+            }
         }
-    })
+    )
     BasicTextField(
         value = text,
         textStyle = textStyle,
@@ -94,7 +101,10 @@ fun OtpTextField(
     isError: Boolean = false,
     textStyle: TextStyle = BtechTheme.typography.heading.heading8xl,
     otpCount: Int = 6,
-    keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+    keyboardOptions: KeyboardOptions = KeyboardOptions(
+        keyboardType = KeyboardType.Number,
+        imeAction = ImeAction.Done
+    ),
     onValueChange: (TextFieldValue) -> Unit
 ) {
     val shakeController = rememberShakeController()
