@@ -45,7 +45,7 @@ fun LoginProfilePicture(
             )
         } else {
             Text(
-                text = name.getInitialsFromName() ?: "",
+                text = name.getInitialsFromName(),
                 style = TextStyle(
                     fontSize = 34.62.sp,
                     lineHeight = 28.85.sp,

@@ -1,10 +1,14 @@
 package com.btech.presentation.textfield.otp
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
@@ -23,7 +27,7 @@ import com.btech.presentation.theme.BtechTheme
 
 @Preview(showBackground = true)
 @Composable
-fun PreviewOtpTextField() {
+private fun PreviewOtpTextField() {
     OtpTextField(
         text = "",
         onValueChange = { _ -> }
@@ -35,6 +39,7 @@ fun OtpTextField(
     text: String,
     modifier: Modifier = Modifier,
     isError: Boolean = false,
+    supportingText: String? = null,
     textStyle: TextStyle = BtechTheme.typography.heading.heading8xl,
     otpCount: Int = 6,
     keyboardOptions: KeyboardOptions = KeyboardOptions(
@@ -52,46 +57,62 @@ fun OtpTextField(
             }
         }
     )
-    BasicTextField(
-        value = text,
-        textStyle = textStyle,
-        onValueChange = {
-            if (it.length <= otpCount && it.isDigitsOnly()) {
-                onValueChange(it)
-            }
-        },
-        keyboardOptions = keyboardOptions,
-        decorationBox = {
-            Row(
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.heightIn(min = 56.dp)
-            ) {
-                repeat(otpCount) { index ->
-                    val isFocused = text.length == index
-
-                    val char = if (isFocused) {
-                        ""
-                    } else {
-                        when {
-                            index >= text.length -> ""
-                            else -> text[index].toString()
-                        }
-                    }
-
-                    OtpCharacter(
-                        textStyle = textStyle,
-                        isError = isError,
-                        char = char,
-                        index = index,
-                        otpCount = otpCount,
-                        modifier = Modifier.weight(1f)
-                    )
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        BasicTextField(
+            value = text,
+            textStyle = textStyle,
+            onValueChange = {
+                if (it.length <= otpCount && it.isDigitsOnly()) {
+                    onValueChange(it)
                 }
-            }
-        },
-        modifier = modifier.shake(shakeController)
-    )
+            },
+            keyboardOptions = keyboardOptions,
+            decorationBox = {
+                Row(
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.heightIn(min = 56.dp)
+                ) {
+                    repeat(otpCount) { index ->
+                        val isFocused = text.length == index
+
+                        val char = if (isFocused) {
+                            ""
+                        } else {
+                            when {
+                                index >= text.length -> ""
+                                else -> text[index].toString()
+                            }
+                        }
+
+                        OtpCharacter(
+                            textStyle = textStyle,
+                            isError = isError,
+                            char = char,
+                            index = index,
+                            otpCount = otpCount,
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                }
+            },
+            modifier = modifier.shake(shakeController)
+        )
+
+        supportingText?.let {
+            Spacer(Modifier.height(BtechTheme.spacing.extraLargePadding))
+
+            Text(
+                text = it,
+                style = BtechTheme.typography.utility.utilitySm,
+                color = if (isError) {
+                    BtechTheme.colors.action.actionDanger
+                } else {
+                    BtechTheme.colors.text.textPrimary
+                }
+            )
+        }
+    }
 }
 
 @Composable
@@ -99,6 +120,7 @@ fun OtpTextField(
     textFieldValue: TextFieldValue,
     modifier: Modifier = Modifier,
     isError: Boolean = false,
+    supportingText: String? = null,
     textStyle: TextStyle = BtechTheme.typography.heading.heading8xl,
     otpCount: Int = 6,
     keyboardOptions: KeyboardOptions = KeyboardOptions(
@@ -113,44 +135,61 @@ fun OtpTextField(
             shakeController.shake(ShakeConfig(10, translateX = 5f))
         }
     })
-    BasicTextField(
-        value = textFieldValue,
-        textStyle = textStyle,
-        onValueChange = {
-            if (it.text.length <= otpCount && it.text.isDigitsOnly()) {
-                onValueChange(it)
-            }
-        },
-        keyboardOptions = keyboardOptions,
-        decorationBox = {
-            Row(
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.heightIn(min = 56.dp)
-            ) {
-                repeat(otpCount) { index ->
-                    val isFocused = textFieldValue.text.length == index
 
-                    val char = if (isFocused) {
-                        ""
-                    } else {
-                        when {
-                            index >= textFieldValue.text.length -> ""
-                            else -> textFieldValue.text[index].toString()
-                        }
-                    }
-
-                    OtpCharacter(
-                        textStyle = textStyle,
-                        isError = isError,
-                        char = char,
-                        index = index,
-                        otpCount = otpCount,
-                        modifier = Modifier.weight(1f)
-                    )
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        BasicTextField(
+            value = textFieldValue,
+            textStyle = textStyle,
+            onValueChange = {
+                if (it.text.length <= otpCount && it.text.isDigitsOnly()) {
+                    onValueChange(it)
                 }
-            }
-        },
-        modifier = modifier.shake(shakeController)
-    )
+            },
+            keyboardOptions = keyboardOptions,
+            decorationBox = {
+                Row(
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.heightIn(min = 56.dp)
+                ) {
+                    repeat(otpCount) { index ->
+                        val isFocused = textFieldValue.text.length == index
+
+                        val char = if (isFocused) {
+                            ""
+                        } else {
+                            when {
+                                index >= textFieldValue.text.length -> ""
+                                else -> textFieldValue.text[index].toString()
+                            }
+                        }
+
+                        OtpCharacter(
+                            textStyle = textStyle,
+                            isError = isError,
+                            char = char,
+                            index = index,
+                            otpCount = otpCount,
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                }
+            },
+            modifier = modifier.shake(shakeController)
+        )
+
+        supportingText?.let {
+            Spacer(Modifier.height(BtechTheme.spacing.extraLargePadding))
+
+            Text(
+                text = it,
+                style = BtechTheme.typography.utility.utilitySm,
+                color = if (isError) {
+                    BtechTheme.colors.action.actionDanger
+                } else {
+                    BtechTheme.colors.text.textPrimary
+                }
+            )
+        }
+    }
 }

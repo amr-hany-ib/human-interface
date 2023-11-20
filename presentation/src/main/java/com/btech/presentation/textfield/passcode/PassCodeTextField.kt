@@ -109,11 +109,14 @@ fun PassCodeTextField(
     onValueChange: (TextFieldValue) -> Unit
 ) {
     val shakeController = rememberShakeController()
-    LaunchedEffect(key1 = isError, block = {
-        if (isError) {
-            shakeController.shake(ShakeConfig(10, translateX = 5f))
+    LaunchedEffect(
+        key1 = isError,
+        block = {
+            if (isError) {
+                shakeController.shake(ShakeConfig(10, translateX = 5f))
+            }
         }
-    })
+    )
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally

@@ -1,4 +1,4 @@
-package com.btech.presentation.loading
+package com.btech.presentation.progress
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable

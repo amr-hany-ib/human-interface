@@ -2,8 +2,8 @@ package com.btech.presentation.navigationbar.bottombar
 
 import com.btech.presentation.R
 
-open abstract class BottomBarDestination {
-    open abstract val destinations: List<BottomBarModel>
+abstract class BottomBarDestination {
+    abstract val destinations: List<BottomBarModel>
 }
 
 class MyloCashierBottomDestinations() : BottomBarDestination() {

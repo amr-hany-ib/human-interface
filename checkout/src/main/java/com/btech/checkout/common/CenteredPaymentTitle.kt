@@ -8,6 +8,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.tooling.preview.Preview
 import com.btech.presentation.theme.BtechTheme
 
 @Composable
@@ -15,7 +17,8 @@ fun CenteredPaymentTitle(
     title: String,
     subtitle: String,
     amount: String,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    titleStyle: TextStyle = BtechTheme.typography.heading.heading3xl.copy(color = BtechTheme.colors.text.textPrimary)
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
@@ -23,11 +26,17 @@ fun CenteredPaymentTitle(
     ) {
         Text(
             text = title,
-            style = BtechTheme.typography.heading.heading3xl
+            style = titleStyle
         )
 
         Spacer(Modifier.height(BtechTheme.spacing.hugePadding))
 
         CenteredPaymentAmount(subtitle, amount)
     }
+}
+
+@Preview()
+@Composable
+fun CenteredPaymentTitlePreview() {
+    CenteredPaymentTitle("Test", "Subtitle", "3000")
 }

@@ -25,7 +25,8 @@ data class BtechColors(
     val layerColors: LayerColors = LayerColors(),
     val otpColors: OtpColors = OtpColors(),
     val tagColors: TagColors = TagColors(),
-    val borderColors: BorderColors = BorderColors()
+    val borderColors: BorderColors = BorderColors(),
+    val containerColors: ContainerColors = ContainerColors()
 )
 
 data class AccentColors(
@@ -43,6 +44,7 @@ data class TextColors(
     val textOnColorDisabled: Color = Color(0xFFA9A9A9),
     val textPrimary: Color = Color(0xFF1F1F1F),
     val textSecondary: Color = Color(0xFF0C3E42),
+    val textTertiary: Color = Color(0xFFFCCC00),
     val textPlaceholder: Color = Color(0xFFA9A9A9),
     val textDanger: Color = Color(0xFFEA3A34)
 )
@@ -83,7 +85,7 @@ data class OtpColors(
 )
 
 data class SupportColors(
-    val info: Color = Color(0xFF006AFF),
+    val info: Color = Color(0xFF006AFF)
 )
 
 data class FocusColors(
@@ -107,4 +109,9 @@ data class TagGray(
 data class BorderColors(
     val borderInteractive: Color = Color(0xFF6F6F6F),
     val borderSubtle: Color = Color(0xFFE2E2E2)
+)
+
+data class ContainerColors(
+    val green: Color = Color(0xFF06292C),
+    val green100: Color = Color(0xFF0C3E42)
 )
