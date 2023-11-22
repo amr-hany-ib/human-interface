@@ -49,3 +49,11 @@ fun Context.openMapIntent(
         startActivity(intent)
     }
 }
+
+fun Context.openMapIntent(
+    url: String
+) {
+    val i = Intent(Intent.ACTION_VIEW)
+    i.data = Uri.parse(url)
+    startActivity(i)
+}
