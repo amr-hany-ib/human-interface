@@ -51,9 +51,17 @@ fun Context.openMapIntent(
 }
 
 fun Context.openMapIntent(
-    url: String
+    link: String
 ) {
-    val i = Intent(Intent.ACTION_VIEW)
-    i.data = Uri.parse(url)
-    startActivity(i)
+    try {
+        val uri =
+            Uri.parse(link)
+        val intent = Intent(
+            Intent.ACTION_VIEW,
+            uri
+        )
+        startActivity(intent)
+    } catch (e: Exception) {
+        Log.e("Context.openMapIntent", e.stackTraceToString())
+    }
 }

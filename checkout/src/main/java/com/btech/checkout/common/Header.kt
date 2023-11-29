@@ -46,14 +46,12 @@ fun Header(
             Text(
                 text = title,
                 style = titleStyle,
-                color = BtechTheme.colors.text.textPrimary,
                 modifier = Modifier.fillMaxWidth()
             )
 
             Text(
                 text = subtitle,
                 style = subtitleStyle,
-                color = BtechTheme.colors.text.textPrimary,
                 modifier = Modifier.fillMaxWidth()
             )
         }

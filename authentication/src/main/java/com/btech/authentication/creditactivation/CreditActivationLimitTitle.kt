@@ -1,42 +1,47 @@
 package com.btech.authentication.creditactivation
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.constraintlayout.compose.ConstraintLayout
 import com.btech.presentation.theme.BtechTheme
 
 @Composable
 fun CreditActivationLimitTitle(
+    title: String,
     currency: String,
     creditLimit: String,
     modifier: Modifier = Modifier
 ) {
-    ConstraintLayout(modifier) {
-        val (currencyLabel, amount) = createRefs()
+    Column(
+        modifier = modifier,
+        verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.largePadding),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Text(
-            text = currency,
-            color = BtechTheme.colors.text.textTertiary,
-            style = BtechTheme.typography.heading.heading3xl,
-            modifier = Modifier.constrainAs(currencyLabel) {
-                top.linkTo(amount.top)
-                bottom.linkTo(amount.bottom)
-                end.linkTo(amount.start)
-            }.padding(end = BtechTheme.spacing.mediumPadding)
+            text = title,
+            color = BtechTheme.colors.text.textOnColor,
+            modifier = Modifier.align(Alignment.CenterHorizontally),
+            style = BtechTheme.typography.body.bodyMd
         )
 
         Text(
             text = creditLimit,
             color = BtechTheme.colors.text.textTertiary,
             style = BtechTheme.typography.display.displayMd,
-            modifier = Modifier.constrainAs(amount) {
-                top.linkTo(parent.top)
-                bottom.linkTo(parent.bottom)
-                end.linkTo(parent.end)
-                start.linkTo(parent.start)
-            }
+            textAlign = TextAlign.Center
+        )
+        Text(
+            text = currency,
+            color = BtechTheme.colors.text.textTertiary,
+            style = BtechTheme.typography.heading.heading3xl,
+            modifier = Modifier.padding(end = BtechTheme.spacing.mediumPadding),
+            textAlign = TextAlign.Center
         )
     }
 }
@@ -44,5 +49,9 @@ fun CreditActivationLimitTitle(
 @Preview
 @Composable
 private fun CreditActivationLimitTitlePreview() {
-    CreditActivationLimitTitle(currency = "EGP", creditLimit = "1000")
+    CreditActivationLimitTitle(
+        title = "You have an approved credit limit",
+        currency = "EGP",
+        creditLimit = "1000"
+    )
 }

@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import com.btech.presentation.Lambda
 import com.btech.presentation.theme.BtechTheme
@@ -92,5 +93,32 @@ fun buildCustomizableStyleString(
             start = text.indexOf(customizableText).coerceAtLeast(0),
             end = text.indexOf(customizableText) + customizableText.length
         )
+    }
+}
+
+// add multiple clickable annotations to the same string
+@Composable
+fun getAnnotatedString(
+    text: String,
+    clickableText: Array<AnnotatedClickableTextModel>
+): AnnotatedString {
+    return buildAnnotatedString {
+        withStyle(style = BtechTheme.typography.body.bodyMd.toSpanStyle()) {
+            append(text)
+        }
+        clickableText.forEach { annotation ->
+            addStringAnnotation(
+                tag = annotation.text,
+                annotation = annotation.annotation,
+                start = text.indexOf(annotation.text).coerceAtLeast(0),
+                end = text.indexOf(annotation.text) + annotation.text.length
+            )
+            addStyle(
+                style = BtechTheme.typography.body.bodyMd.copy(textDecoration = TextDecoration.Underline)
+                    .toSpanStyle(),
+                start = text.indexOf(annotation.text).coerceAtLeast(0),
+                end = text.indexOf(annotation.text) + annotation.text.length
+            )
+        }
     }
 }

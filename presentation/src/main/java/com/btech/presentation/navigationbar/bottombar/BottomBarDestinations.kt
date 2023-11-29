@@ -1,11 +1,14 @@
 package com.btech.presentation.navigationbar.bottombar
 
+import androidx.annotation.Keep
 import com.btech.presentation.R
 
+@Keep
 abstract class BottomBarDestination {
     abstract val destinations: List<BottomBarModel>
 }
 
+@Keep
 class MyloCashierBottomDestinations() : BottomBarDestination() {
     override val destinations: List<BottomBarModel>
         get() = listOf(
@@ -22,6 +25,7 @@ class MyloCashierBottomDestinations() : BottomBarDestination() {
         )
 }
 
+@Keep
 class MyloBottomBarDestination() : BottomBarDestination() {
     override val destinations: List<BottomBarModel>
         get() = listOf(

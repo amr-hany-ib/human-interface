@@ -16,7 +16,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -39,7 +39,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":presentation"))
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -51,6 +50,10 @@ dependencies {
     implementation(libs.material3)
     implementation(libs.splashscreen)
     implementation(libs.landscapist.coil)
+    implementation(libs.androidx.material.icons.extended.android)
+    implementation(project(":presentation"))
+    implementation(project(":checkout"))
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)

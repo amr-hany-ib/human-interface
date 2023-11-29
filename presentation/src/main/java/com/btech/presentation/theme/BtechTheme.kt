@@ -1,7 +1,9 @@
 package com.btech.presentation.theme
 
+import androidx.annotation.Keep
 import androidx.compose.runtime.Composable
 
+@Keep
 object BtechTheme {
     val typography
         @Composable

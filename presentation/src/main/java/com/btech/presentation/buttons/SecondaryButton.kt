@@ -1,7 +1,6 @@
 package com.btech.presentation.buttons
 
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -37,6 +36,7 @@ fun SecondaryButton(
         disabledContainerColor = BtechTheme.colors.field.fieldBackgroundDisabled,
         disabledContentColor = BtechTheme.colors.text.textOnColorDisabled
     ),
+    leadingContent: @Composable Lambda? = null,
     trailingContent: @Composable Lambda? = null,
     onClick: Lambda
 ) {
@@ -47,6 +47,9 @@ fun SecondaryButton(
         colors = colors,
         onClick = onClick,
         content = {
+            leadingContent?.let {
+                it()
+            }
             Text(
                 text = text,
                 style = BtechTheme.typography.utility.utilityMd,

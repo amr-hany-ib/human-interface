@@ -19,11 +19,3 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
-
--keep class com.btech.presentation.*.** {*;}
--keep class com.btech.presentation.theme.*.** {*;}
--keep class com.btech.presentation.theme.BtechColors.** {*;}
--keep class com.btech.presentation.theme.BtechColors {*;}
--keep class com.btech.presentation.theme.BtechTheme {*;}
--keep class com.btech.presentation.theme.BtechTheme.*.** {*;}
--dontwarn java.lang.invoke.StringConcatFactory
