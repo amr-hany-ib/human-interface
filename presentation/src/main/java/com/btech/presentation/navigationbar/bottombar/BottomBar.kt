@@ -12,7 +12,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.btech.presentation.IntLambda
 import com.btech.presentation.divider.HorizontalDivider
 import com.btech.presentation.theme.BtechTheme
@@ -48,7 +47,7 @@ fun BottomBar(
                     } else {
                         Color.Unspecified
                     },
-                    height = 2.dp
+                    height = BtechTheme.spacing.extraSmallPadding
                 )
                 Tab(
                     selected = isSelected,

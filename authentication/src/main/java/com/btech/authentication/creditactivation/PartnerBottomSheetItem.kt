@@ -19,6 +19,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -67,13 +68,15 @@ fun PartnerBottomSheetItem(
 
             Text(
                 text = category,
+                maxLines = 1,
                 style = TextStyle(
                     fontSize = 14.sp,
                     lineHeight = 16.sp,
                     fontFamily = notoSansFontFamily,
                     fontWeight = FontWeight(400)
                 ),
-                color = BtechTheme.colors.containerColors.grey100
+                color = BtechTheme.colors.containerColors.grey100,
+                overflow = TextOverflow.Ellipsis
             )
         }
     }

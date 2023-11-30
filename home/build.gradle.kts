@@ -1,7 +1,7 @@
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     alias(libs.plugins.android.library)
-    //alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.android)
 }
 
 apply {
@@ -9,9 +9,8 @@ apply {
 }
 
 android {
-    namespace = "com.btech.checkout"
+    namespace = "com.btech.mylo.home"
 }
 
 dependencies {
-    implementation(project(":presentation"))
 }

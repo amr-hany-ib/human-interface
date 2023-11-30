@@ -40,9 +40,9 @@ class MyloBottomBarDestination() : BottomBarDestination() {
                 R.string.bottom_navbar_scan
             ),
             BottomBarModel(
-                R.drawable.ic_account_active,
-                R.drawable.ic_account_inactive,
-                R.string.bottom_navbar_account
+                R.drawable.ic_payment_hub_active,
+                R.drawable.ic_payment_hub_inactive,
+                R.string.bottom_navbar_payment_hub
             )
         )
 }

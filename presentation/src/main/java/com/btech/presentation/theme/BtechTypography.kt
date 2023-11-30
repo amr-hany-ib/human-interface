@@ -19,7 +19,8 @@ data class BtechTypography(
     val display: DisplayStyle = DisplayStyle(),
     val heading: HeadingStyle = HeadingStyle(),
     val body: BodyStyle = BodyStyle(),
-    val utility: UtilityStyle = UtilityStyle()
+    val utility: UtilityStyle = UtilityStyle(),
+    val tokenlessStyle: TokenLessStyle = TokenLessStyle()
 )
 
 data class DisplayStyle(
@@ -212,6 +213,36 @@ data class UtilityStyle(
         platformStyle = PlatformTextStyle(
             includeFontPadding = false
         )
+    )
+)
+
+data class TokenLessStyle(
+    val twelveTwenty400: TextStyle = TextStyle(
+        fontSize = 12.sp,
+        lineHeight = 20.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight.Normal
+    ),
+    val twelveNone500: TextStyle = TextStyle(
+        fontSize = 12.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight(500)
+    ),
+    val eighteenNone600: TextStyle = TextStyle(
+        fontSize = 18.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight(600)
+    ),
+    val twelveTwentyOne400: TextStyle = TextStyle(
+        fontSize = 12.sp,
+        lineHeight = 21.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight.Normal
+    ),
+    val twentyTwoNone700: TextStyle = TextStyle(
+        fontSize = 22.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight.Bold
     )
 )
 

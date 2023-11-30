@@ -31,7 +31,6 @@ fun SelectionChip(
     modifier: Modifier = Modifier,
     minHeight: Dp = BtechTheme.spacing.spacing40,
     elevation: SelectableChipElevation? = FilterChipDefaults.filterChipElevation(),
-    border: SelectableChipBorder? = null,
     shape: Shape = RoundedCornerShape(BtechTheme.spacing.hugePadding),
     leadingIcon: @Composable Lambda? = null,
     trailingIcon: @Composable Lambda? = null,
@@ -58,7 +57,7 @@ fun SelectionChip(
                 )
             },
             modifier = modifier.heightIn(min = minHeight),
-            border = border,
+            border = null,
             shape = shape,
             leadingIcon = leadingIcon,
             trailingIcon = trailingIcon,

@@ -5,6 +5,7 @@
     <string name="bottom_navbar_home">Home</string>
     <string name="bottom_navbar_scan">Scan</string>
     <string name="bottom_navbar_account">Account</string>
+    <string name="bottom_navbar_payment_hub">Payment Hub</string>
     <string name="bottom_navbar_new_purchase">New purchase</string>
     <string name="confirmation_popup_decline">No</string>
     <string name="confirmation_popup_confirm">Yes</string>
