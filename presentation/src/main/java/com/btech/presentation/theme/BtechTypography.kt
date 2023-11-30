@@ -243,7 +243,27 @@ data class TokenLessStyle(
         fontSize = 22.sp,
         fontFamily = notoSansFontFamily,
         fontWeight = FontWeight.Bold
+    ),
+    val fourteenTwenty600: TextStyle = TextStyle(
+        fontSize = 14.sp,
+        lineHeight = 20.3.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight(600)
+    ),
+    val sixteenThirteen400: TextStyle = TextStyle(
+        fontSize = 16.52.sp,
+        lineHeight = 13.77.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight(400)
+    ),
+    val fourteenTwenty400: TextStyle = TextStyle(
+        fontSize = 14.sp,
+        lineHeight = 20.3.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight(400)
+
     )
+
 )
 
 val LocalTypography = staticCompositionLocalOf {
