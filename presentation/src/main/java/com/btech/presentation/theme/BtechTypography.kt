@@ -243,6 +243,12 @@ data class TokenLessStyle(
         fontSize = 22.sp,
         fontFamily = notoSansFontFamily,
         fontWeight = FontWeight.Bold
+    ),
+    val sixteenThirteen400: TextStyle = TextStyle(
+        fontSize = 16.52.sp,
+        lineHeight = 13.77.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight(400)
     )
 )
 

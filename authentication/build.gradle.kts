@@ -1,12 +1,17 @@
-//plugins {
-    //alias(libs.plugins.android.library)
-    //alias(libs.plugins.kotlin.android)
-//}
+@Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+}
 
-//apply {
-//    from("$rootDir/base-module.gradle")
-//}
+apply {
+    from("$rootDir/base-module.gradle")
+}
 
-//android {
-//    namespace = "com.btech.authentication"
-//}
+android {
+    namespace = "com.btech.authentication"
+}
+
+dependencies {
+    implementation(project(":presentation"))
+}
