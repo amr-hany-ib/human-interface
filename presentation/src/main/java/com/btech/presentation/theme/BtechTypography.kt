@@ -263,7 +263,6 @@ data class TokenLessStyle(
         fontWeight = FontWeight(400)
 
     )
-
 )
 
 val LocalTypography = staticCompositionLocalOf {
