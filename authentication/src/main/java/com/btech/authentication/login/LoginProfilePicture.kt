@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -27,13 +28,22 @@ import com.btech.presentation.theme.notoSansFontFamily
 @Composable
 fun LoginProfilePicture(
     name: String?,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    style: TextStyle = TextStyle(
+        fontSize = 34.62.sp,
+        lineHeight = 28.85.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight.Normal,
+        color = BtechTheme.colors.text.textSecondary,
+        textAlign = TextAlign.Center
+    ),
+    background: Color = BtechTheme.colors.text.textSecondary.copy(alpha = 0.1f)
 ) {
     Box(
         modifier = modifier
             .size(88.dp)
             .clip(CircleShape)
-            .background(BtechTheme.colors.text.textSecondary.copy(alpha = 0.1f)),
+            .background(background),
         contentAlignment = Alignment.Center
     ) {
         if (name.isNullOrEmpty()) {
@@ -46,14 +56,7 @@ fun LoginProfilePicture(
         } else {
             Text(
                 text = name.getInitialsFromName(),
-                style = TextStyle(
-                    fontSize = 34.62.sp,
-                    lineHeight = 28.85.sp,
-                    fontFamily = notoSansFontFamily,
-                    fontWeight = FontWeight.Normal,
-                    color = BtechTheme.colors.text.textSecondary,
-                    textAlign = TextAlign.Center
-                )
+                style = style
             )
         }
     }

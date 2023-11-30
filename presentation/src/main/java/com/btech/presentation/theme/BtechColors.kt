@@ -38,6 +38,7 @@ data class BtechColors(
 
 @Keep
 data class AccentColors(
+    val accent300: Color = Color(0xffB6C5C6),
     val accent600: Color = Color(0xFF006AFF)
 )
 

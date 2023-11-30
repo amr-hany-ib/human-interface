@@ -22,7 +22,9 @@ data class BtechSpacing(
     val buttonMinHeight: Dp = 52.dp,
     val horizontalPadding: Dp = 32.dp,
     val tagVerticalPadding: Dp = 8.dp,
-    val verticalPadding: Dp = 16.dp
+    val verticalPadding: Dp = 16.dp,
+    val homeScreenLogo: Dp = 66.dp,
+    val homeProfileIcon: Dp = 42.dp
 )
 
 val LocalSpacing = staticCompositionLocalOf {
