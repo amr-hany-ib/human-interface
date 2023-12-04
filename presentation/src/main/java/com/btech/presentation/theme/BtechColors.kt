@@ -33,13 +33,25 @@ data class BtechColors(
     val borderColors: BorderColors = BorderColors(),
     val containerColors: ContainerColors = ContainerColors(),
     val neutralColors: NeutralColors = NeutralColors(),
-    val tokenlessColors: TokenlessColors = TokenlessColors()
+    val tokenlessColors: TokenlessColors = TokenlessColors(),
+    val utilitiesColors: UtilitiesColors = UtilitiesColors()
+
 )
 
 @Keep
 data class AccentColors(
     val accent300: Color = Color(0xffB6C5C6),
     val accent600: Color = Color(0xFF006AFF)
+)
+
+@Keep
+data class Base(
+    val baseText: Color = Color(0xff54777A)
+)
+
+@Keep
+data class UtilitiesColors(
+    val base: Base = Base()
 )
 
 @Keep

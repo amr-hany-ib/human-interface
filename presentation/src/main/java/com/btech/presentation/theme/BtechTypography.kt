@@ -20,7 +20,9 @@ data class BtechTypography(
     val heading: HeadingStyle = HeadingStyle(),
     val body: BodyStyle = BodyStyle(),
     val utility: UtilityStyle = UtilityStyle(),
-    val tokenlessStyle: TokenLessStyle = TokenLessStyle()
+    val tokenlessStyle: TokenLessStyle = TokenLessStyle(),
+    val medium: MediumStyle = MediumStyle()
+
 )
 
 data class DisplayStyle(
@@ -32,6 +34,19 @@ data class DisplayStyle(
         platformStyle = PlatformTextStyle(
             includeFontPadding = false
         )
+    )
+)
+
+data class MediumStyle(
+    val mediumLg: TextStyle = TextStyle(
+        fontSize = 16.sp,
+        lineHeight = 22.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight(500),
+        platformStyle = PlatformTextStyle(
+            includeFontPadding = false
+        )
+
     )
 )
 
