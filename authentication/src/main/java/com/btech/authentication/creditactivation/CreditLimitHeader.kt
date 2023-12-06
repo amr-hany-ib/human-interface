@@ -1,6 +1,7 @@
 package com.btech.authentication.creditactivation
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -8,6 +9,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -26,6 +28,7 @@ fun CreditLimitTopBar(
     currency: String,
     creditLimit: String,
     modifier: Modifier = Modifier,
+    onLogout: Lambda,
     onBack: Lambda
 ) {
     Column(
@@ -46,14 +49,24 @@ fun CreditLimitTopBar(
                 containerColor = BtechTheme.colors.containerColors.green,
                 actionIconContentColor = BtechTheme.colors.text.textTertiary,
                 navigationIconContentColor = BtechTheme.colors.text.textTertiary
-            )
+            ),
+            actions = {
+                Text(
+                    text = stringResource(id = R.string.logout),
+                    modifier = Modifier.clickable { onLogout() },
+                    style = BtechTheme.typography.body.bodyMd
+                )
+            }
+
         )
 
         CreditActivationLimitTitle(
             title,
-            currency,
-            creditLimit,
-            Modifier.fillMaxWidth()
+            currency = currency,
+            creditLimit = creditLimit,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = BtechTheme.spacing.horizontalPadding)
         )
 
         Spacer(Modifier.height(BtechTheme.spacing.extraHugePadding))
@@ -66,7 +79,8 @@ private fun CreditLimitTopBarPreview() {
     CreditLimitTopBar(
         title = "you have an approved credit limit",
         currency = "EGP",
-        creditLimit = "10,000"
-    ) {
-    }
+        creditLimit = "10,0000000000000",
+        onLogout = {},
+        onBack = {}
+    )
 }

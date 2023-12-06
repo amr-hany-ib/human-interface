@@ -27,7 +27,8 @@ fun CreditActivationLimitTitle(
             text = title,
             color = BtechTheme.colors.text.textOnColor,
             modifier = Modifier.align(Alignment.CenterHorizontally),
-            style = BtechTheme.typography.body.bodyMd
+            style = BtechTheme.typography.heading.headingSm,
+            textAlign = TextAlign.Center
         )
 
         Text(

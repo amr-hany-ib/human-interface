@@ -15,4 +15,5 @@ android {
 
 dependencies {
     implementation(project(":presentation"))
+    implementation(libs.accompanist.placeholder)
 }

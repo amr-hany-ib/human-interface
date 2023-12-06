@@ -34,8 +34,8 @@ data class BtechColors(
     val containerColors: ContainerColors = ContainerColors(),
     val neutralColors: NeutralColors = NeutralColors(),
     val tokenlessColors: TokenlessColors = TokenlessColors(),
-    val utilitiesColors: UtilitiesColors = UtilitiesColors()
-
+    val utilitiesColors: UtilitiesColors = UtilitiesColors(),
+    val skeletonColors: SkeletonColors = SkeletonColors()
 )
 
 @Keep
@@ -55,8 +55,16 @@ data class UtilitiesColors(
 )
 
 @Keep
+data class SkeletonColors(
+    val grey: Color = Color(0xFFF2F4F7),
+    val white: Color = Color(0xFFFFFFFF),
+    val skeletonBackground: Color = Color(0xFFE2E2E2)
+)
+
+@Keep
 data class ActionColors(
     val actionPrimary: Color = Color(0xFF0C3E42),
+    val actionPrimaryHover: Color = Color(0xFF3C6467),
     val disabledActionPrimary: Color = Color(0xFFE0E0E0),
     val actionDanger: Color = Color(0xFFEA3A34)
 )
@@ -135,12 +143,30 @@ data class TagColors(
     val tagGray: TagGray = TagGray(),
     val tagOrangeBackground: Color = Color(0xFFFF5000),
     val tagOrangeText: Color = Color(0xFFFF5000),
-    val tagYellowBackground: Color = Color(0xFFFCCC00)
+    val tagYellowBackground: Color = Color(0xFFFCCC00),
+    val tagRed: TagRed = TagRed(),
+    val tagYellow: TagYellow = TagYellow()
 )
 
 @Keep
 data class TagGray(
     val tagGrayBackground: Color = Color(0xFFE2E2E2)
+)
+
+@Keep
+data class TagRed(
+    val tagRedText: Color = Color(0xFF541513),
+    val tagRedHighContrastText: Color = Color(0xFFFFFFFF),
+    val tagRedBackground: Color = Color(0xFFFBD8D6),
+    val tagRedHighContrastBackground: Color = Color(0xFFEA3A34)
+)
+
+@Keep
+data class TagYellow(
+    val tagYellowText: Color = Color(0xFF624904),
+    val tagYellowHighContrastText: Color = Color(0xFF1F1F1F),
+    val tagYellowHighContrastBackground: Color = Color(0xFFF5B600),
+    val tagYellowBackground: Color = Color(0xFFFFF2CE)
 )
 
 @Keep
@@ -173,5 +199,6 @@ data class TokenlessColors(
     val e7e7e7: Color = Color(0xFFE7E7E7),
     val ff5000: Color = Color(0xFFFF5000),
     val ffe9de: Color = Color(0xFFFFE9DE),
-    val fafafa: Color = Color(0xFFFAFAFA)
+    val fafafa: Color = Color(0xFFFAFAFA),
+    val ff666666: Color = Color(0xFF666666)
 )
