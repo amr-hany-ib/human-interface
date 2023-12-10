@@ -31,7 +31,7 @@ fun TertiaryButton(
     contentPadding: PaddingValues = PaddingValues(horizontal = BtechTheme.spacing.verticalPadding),
     isEnabled: Boolean = true,
     shape: Shape = RoundedCornerShape(100),
-    minHeight: Dp = BtechTheme.spacing.buttonMinHeight,
+    minHeight: Dp = BtechTheme.spacing.spacing52,
     colors: ButtonColors = ButtonDefaults.outlinedButtonColors(
         containerColor = Color.Unspecified,
         contentColor = BtechTheme.colors.action.actionPrimary,
@@ -62,8 +62,8 @@ fun TertiaryButton(
             2.dp,
             BtechTheme.colors.borderColors.borderSubtle,
             shape,
-            BtechTheme.spacing.largePadding,
-            BtechTheme.spacing.largePadding
+            BtechTheme.spacing.spacing12,
+            BtechTheme.spacing.spacing12
         ).heightIn(min = minHeight)
     )
 }
@@ -80,7 +80,7 @@ fun TertiaryButtonPreview() {
                 Icon(
                     imageVector = Icons.Default.Add,
                     contentDescription = null,
-                    modifier = Modifier.padding(4.dp).size(BtechTheme.spacing.extraLargePadding)
+                    modifier = Modifier.padding(4.dp).size(BtechTheme.spacing.spacing16)
                 )
             }
         )
@@ -90,7 +90,7 @@ fun TertiaryButtonPreview() {
                 Icon(
                     imageVector = Icons.Default.Add,
                     contentDescription = null,
-                    modifier = Modifier.padding(4.dp).size(BtechTheme.spacing.extraLargePadding)
+                    modifier = Modifier.padding(4.dp).size(BtechTheme.spacing.spacing16)
                 )
             }
         )
@@ -103,7 +103,7 @@ fun InactiveTertiaryButton(
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(horizontal = BtechTheme.spacing.verticalPadding),
     shape: Shape = RoundedCornerShape(100),
-    minHeight: Dp = BtechTheme.spacing.buttonMinHeight,
+    minHeight: Dp = BtechTheme.spacing.spacing52,
     trailingContent: @Composable Lambda? = null
 ) {
     TertiaryButton(

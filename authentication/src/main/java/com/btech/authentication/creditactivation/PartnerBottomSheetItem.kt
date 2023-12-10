@@ -35,12 +35,12 @@ fun PartnerBottomSheetItem(
 ) {
     Row(
         modifier = modifier
-            .clip(RoundedCornerShape(BtechTheme.spacing.largePadding))
+            .clip(RoundedCornerShape(BtechTheme.spacing.spacing12))
             .background(BtechTheme.colors.containerColors.grey200)
-            .padding(BtechTheme.spacing.extraLargePadding)
+            .padding(BtechTheme.spacing.spacing16)
             .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(BtechTheme.spacing.extraLargePadding)
+        horizontalArrangement = Arrangement.spacedBy(BtechTheme.spacing.spacing16)
     ) {
         Box(
             modifier = Modifier
@@ -54,7 +54,7 @@ fun PartnerBottomSheetItem(
             )
         }
 
-        Column(verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.mediumPadding)) {
+        Column(verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.spacing8)) {
             Text(
                 text = partnerName,
                 style = TextStyle(

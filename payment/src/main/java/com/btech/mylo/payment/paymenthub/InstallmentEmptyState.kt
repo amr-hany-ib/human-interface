@@ -50,7 +50,7 @@ fun InstallmentEmptyState(
                 contentScale = ContentScale.FillWidth
             )
 
-            Spacer(modifier = Modifier.height(BtechTheme.spacing.extraLargePadding))
+            Spacer(modifier = Modifier.height(BtechTheme.spacing.spacing16))
 
             Text(
                 text = title,
@@ -63,7 +63,7 @@ fun InstallmentEmptyState(
                 )
             )
 
-            Spacer(modifier = Modifier.height(BtechTheme.spacing.mediumPadding))
+            Spacer(modifier = Modifier.height(BtechTheme.spacing.spacing8))
 
             Text(
                 text = subtitle,

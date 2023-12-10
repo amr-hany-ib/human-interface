@@ -35,7 +35,7 @@ fun ActionBottomBar(
             color = BtechTheme.colors.borderColors.borderSubtle
         )
 
-        Spacer(Modifier.height(BtechTheme.spacing.extraLargePadding))
+        Spacer(Modifier.height(BtechTheme.spacing.spacing16))
 
         PrimaryButton(
             text = text,

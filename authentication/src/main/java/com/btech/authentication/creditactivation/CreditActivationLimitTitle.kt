@@ -20,7 +20,7 @@ fun CreditActivationLimitTitle(
 ) {
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.largePadding),
+        verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.spacing12),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
@@ -41,7 +41,7 @@ fun CreditActivationLimitTitle(
             text = currency,
             color = BtechTheme.colors.text.textTertiary,
             style = BtechTheme.typography.heading.heading3xl,
-            modifier = Modifier.padding(end = BtechTheme.spacing.mediumPadding),
+            modifier = Modifier.padding(end = BtechTheme.spacing.spacing8),
             textAlign = TextAlign.Center
         )
     }

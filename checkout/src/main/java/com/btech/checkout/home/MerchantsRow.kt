@@ -36,12 +36,12 @@ fun MerchantRow(
 ) {
     RoundedBox(
         modifier = modifier,
-        paddingValues = PaddingValues(BtechTheme.spacing.extraLargePadding)
+        paddingValues = PaddingValues(BtechTheme.spacing.spacing16)
     ) {
         Row(
             Modifier
                 .fillMaxWidth()
-                .padding(vertical = BtechTheme.spacing.extraLargePadding),
+                .padding(vertical = BtechTheme.spacing.spacing16),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {

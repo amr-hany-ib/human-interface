@@ -35,8 +35,8 @@ fun OfferTag(
             .clip(RoundedCornerShape(100))
             .background(tagColor)
             .padding(
-                vertical = BtechTheme.spacing.mediumPadding,
-                horizontal = BtechTheme.spacing.extraLargePadding
+                vertical = BtechTheme.spacing.spacing8,
+                horizontal = BtechTheme.spacing.spacing16
             ),
         verticalAlignment = Alignment.CenterVertically
     ) {

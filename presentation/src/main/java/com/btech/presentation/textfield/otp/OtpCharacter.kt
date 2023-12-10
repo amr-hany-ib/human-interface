@@ -40,7 +40,7 @@ fun OtpCharacter(
         if (char.isEmpty()) {
             Box(
                 Modifier
-                    .size(BtechTheme.spacing.mediumPadding)
+                    .size(BtechTheme.spacing.spacing8)
                     .clip(CircleShape)
                     .background(
                         if (isError) {

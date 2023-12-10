@@ -36,7 +36,7 @@ fun CommercialOfferMonthlyPaymentItem(
             style = BtechTheme.typography.heading.headingMd
         )
 
-        Spacer(Modifier.height(BtechTheme.spacing.smallPadding))
+        Spacer(Modifier.height(BtechTheme.spacing.spacing6))
 
         DifferentSizingPrice(amount = amount, delimiter = delimiter)
     }

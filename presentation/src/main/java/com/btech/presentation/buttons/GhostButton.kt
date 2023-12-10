@@ -24,7 +24,7 @@ fun GhostButton(
     contentPadding: PaddingValues = PaddingValues(horizontal = BtechTheme.spacing.verticalPadding),
     isEnabled: Boolean = true,
     shape: Shape = RoundedCornerShape(100),
-    minHeight: Dp = BtechTheme.spacing.buttonMinHeight,
+    minHeight: Dp = BtechTheme.spacing.spacing52,
     colors: ButtonColors = ButtonDefaults.buttonColors(
         containerColor = Color.Unspecified,
         contentColor = BtechTheme.colors.text.textSecondary,

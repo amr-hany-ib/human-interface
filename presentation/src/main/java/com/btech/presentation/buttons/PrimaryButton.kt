@@ -35,7 +35,7 @@ fun PrimaryButtonPreview() {
                 contentDescription = null,
                 modifier = Modifier
                     .padding(4.dp)
-                    .size(BtechTheme.spacing.extraLargePadding)
+                    .size(BtechTheme.spacing.spacing16)
             )
         }
     )
@@ -48,7 +48,7 @@ fun PrimaryButton(
     contentPadding: PaddingValues = PaddingValues(horizontal = BtechTheme.spacing.verticalPadding),
     isEnabled: Boolean = true,
     shape: Shape = RoundedCornerShape(100),
-    minHeight: Dp = BtechTheme.spacing.buttonMinHeight,
+    minHeight: Dp = BtechTheme.spacing.spacing52,
     colors: ButtonColors = ButtonDefaults.buttonColors(
         containerColor = BtechTheme.colors.action.actionPrimary,
         contentColor = BtechTheme.colors.text.textOnColor,

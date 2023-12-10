@@ -22,8 +22,8 @@ fun InstallmentDetailsLabel(
     textStyle: TextStyle = BtechTheme.typography.body.bodyMd.copy(
         textDecoration = TextDecoration.Underline
     ),
-    iconSize: Dp = BtechTheme.spacing.extraLargePadding,
-    horizontalArrangement: Arrangement.Horizontal = Arrangement.spacedBy(BtechTheme.spacing.extraSmallPadding)
+    iconSize: Dp = BtechTheme.spacing.spacing16,
+    horizontalArrangement: Arrangement.Horizontal = Arrangement.spacedBy(BtechTheme.spacing.spacing4)
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,

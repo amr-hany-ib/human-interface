@@ -33,7 +33,7 @@ fun PrimaryOutlinedButtonPreview() {
             Icon(
                 imageVector = Icons.Default.Add,
                 contentDescription = null,
-                modifier = Modifier.padding(4.dp).size(BtechTheme.spacing.extraLargePadding)
+                modifier = Modifier.padding(4.dp).size(BtechTheme.spacing.spacing16)
             )
         }
     )
@@ -46,7 +46,7 @@ fun PrimaryOutlinedButton(
     contentPadding: PaddingValues = PaddingValues(horizontal = BtechTheme.spacing.verticalPadding),
     isEnabled: Boolean = true,
     shape: Shape = RoundedCornerShape(100),
-    minHeight: Dp = BtechTheme.spacing.buttonMinHeight,
+    minHeight: Dp = BtechTheme.spacing.spacing52,
     contentColor: Color = BtechTheme.colors.action.actionPrimary,
     trailingContent: @Composable Lambda? = null,
     onClick: Lambda
@@ -59,7 +59,7 @@ fun PrimaryOutlinedButton(
             disabledContentColor = BtechTheme.colors.text.textOnColorDisabled
         ),
         border = BorderStroke(
-            BtechTheme.spacing.tinyPadding,
+            BtechTheme.spacing.spacing2,
             if (isEnabled) {
                 contentColor
             } else {

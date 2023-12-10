@@ -18,12 +18,12 @@ fun AccountLoginHeader(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier.padding(BtechTheme.spacing.extraLargePadding),
+        modifier = modifier.padding(BtechTheme.spacing.spacing16),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         LoginProfilePicture(name = name)
 
-        Spacer(Modifier.height(BtechTheme.spacing.largePadding))
+        Spacer(Modifier.height(BtechTheme.spacing.spacing12))
 
         Text(
             text = name ?: mobileNumber,

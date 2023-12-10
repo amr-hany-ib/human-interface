@@ -15,7 +15,7 @@ fun CenteredPaymentAmount(
     subtitle: String,
     amount: String,
     modifier: Modifier = Modifier,
-    spacing: Dp = BtechTheme.spacing.extraLargePadding
+    spacing: Dp = BtechTheme.spacing.spacing16
 
 ) {
     Column(

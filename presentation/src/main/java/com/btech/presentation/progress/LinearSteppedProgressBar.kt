@@ -74,13 +74,13 @@ fun Step(
                 )
                 .zIndex(1f),
             color = color,
-            thickness = BtechTheme.spacing.tinyPadding
+            thickness = BtechTheme.spacing.spacing2
         )
 
         Divider(
             modifier = Modifier.align(Alignment.CenterStart),
             color = BtechTheme.colors.background.backgroundColor,
-            thickness = BtechTheme.spacing.tinyPadding
+            thickness = BtechTheme.spacing.spacing2
         )
     }
 }

@@ -12,7 +12,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.btech.presentation.Lambda
 import com.btech.presentation.divider.HorizontalDivider
 import com.btech.presentation.theme.BtechTheme
@@ -40,8 +39,8 @@ fun Header(
         Column(
             modifier = Modifier
                 .padding(contentPadding)
-                .padding(vertical = BtechTheme.spacing.tinyPadding),
-            verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.largePadding)
+                .padding(vertical = BtechTheme.spacing.spacing2),
+            verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.spacing12)
         ) {
             Text(
                 text = title,
@@ -74,7 +73,7 @@ fun Header(
     Column(modifier) {
         Column(
             modifier = Modifier.padding(contentPadding),
-            verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.largePadding)
+            verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.spacing12)
         ) {
             Text(
                 text = title,

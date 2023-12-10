@@ -27,7 +27,7 @@ import com.btech.presentation.theme.BtechTheme
 fun MerchantOfferCardPreview() {
     MerchantOfferCard(
         "B.tech",
-        2000,
+        2000
     )
 }
 
@@ -46,7 +46,7 @@ fun MerchantOfferCard(
     ) {
         Row(
             Modifier
-                .padding(BtechTheme.spacing.extraLargePadding)
+                .padding(BtechTheme.spacing.spacing16)
                 .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween

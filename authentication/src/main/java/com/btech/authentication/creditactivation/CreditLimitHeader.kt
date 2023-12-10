@@ -35,8 +35,8 @@ fun CreditLimitTopBar(
         modifier
             .clip(
                 RoundedCornerShape(
-                    bottomEnd = BtechTheme.spacing.hugePadding,
-                    bottomStart = BtechTheme.spacing.hugePadding
+                    bottomEnd = BtechTheme.spacing.spacing24,
+                    bottomStart = BtechTheme.spacing.spacing24
                 )
             )
             .background(BtechTheme.colors.containerColors.green)
@@ -69,7 +69,7 @@ fun CreditLimitTopBar(
                 .padding(horizontal = BtechTheme.spacing.horizontalPadding)
         )
 
-        Spacer(Modifier.height(BtechTheme.spacing.extraHugePadding))
+        Spacer(Modifier.height(BtechTheme.spacing.spacing32))
     }
 }
 

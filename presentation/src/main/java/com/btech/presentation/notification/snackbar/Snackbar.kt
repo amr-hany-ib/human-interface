@@ -25,13 +25,13 @@ import com.btech.presentation.theme.BtechTheme
 fun NoInternetSnackbar() {
     Row(
         modifier = Modifier
-            .padding(horizontal = BtechTheme.spacing.smallPadding)
+            .padding(horizontal = BtechTheme.spacing.spacing6)
             .clip(RoundedCornerShape(100))
             .background(BtechTheme.colors.action.actionPrimary)
             .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(
-            BtechTheme.spacing.extraSmallPadding,
+            BtechTheme.spacing.spacing4,
             alignment = Alignment.CenterHorizontally
         )
     ) {

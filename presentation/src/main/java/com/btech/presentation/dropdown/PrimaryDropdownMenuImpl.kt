@@ -48,8 +48,8 @@ fun DropdownMenuNoPaddingVertical(
     expanded: Boolean,
     onDismissRequest: () -> Unit,
     modifier: Modifier = Modifier,
-    offset: DpOffset = DpOffset(BtechTheme.spacing.zeroPadding, BtechTheme.spacing.mediumPadding),
-    shape: Shape = RoundedCornerShape(BtechTheme.spacing.largePadding),
+    offset: DpOffset = DpOffset(BtechTheme.spacing.spacing0, BtechTheme.spacing.spacing8),
+    shape: Shape = RoundedCornerShape(BtechTheme.spacing.spacing12),
     properties: PopupProperties = PopupProperties(focusable = true),
     content: @Composable ColumnScope.() -> Unit
 ) {

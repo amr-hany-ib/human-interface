@@ -42,18 +42,18 @@ fun StoreLocationItem(
     Row(
         modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(BtechTheme.spacing.largePadding))
+            .clip(RoundedCornerShape(BtechTheme.spacing.spacing12))
             .clickable { onClick() }
             .border(
                 border = BorderStroke(
                     width = Dp.Hairline,
                     color = BtechTheme.colors.borderColors.borderSubtle
                 ),
-                shape = RoundedCornerShape(BtechTheme.spacing.largePadding)
+                shape = RoundedCornerShape(BtechTheme.spacing.spacing12)
             )
             .padding(
-                vertical = BtechTheme.spacing.largePadding,
-                horizontal = BtechTheme.spacing.extraLargePadding
+                vertical = BtechTheme.spacing.spacing12,
+                horizontal = BtechTheme.spacing.spacing16
             ),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -81,12 +81,12 @@ fun StoreLocationItem(
             )
         }
 
-        Spacer(Modifier.width(BtechTheme.spacing.mediumPadding))
+        Spacer(Modifier.width(BtechTheme.spacing.spacing8))
 
         Box(
             modifier = Modifier
                 .size(42.dp)
-                .clip(RoundedCornerShape(BtechTheme.spacing.extraLargePadding))
+                .clip(RoundedCornerShape(BtechTheme.spacing.spacing16))
                 .background(BtechTheme.colors.action.actionPrimary),
             contentAlignment = Alignment.Center
         ) {

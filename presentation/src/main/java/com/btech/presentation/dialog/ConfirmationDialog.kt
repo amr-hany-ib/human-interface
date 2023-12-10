@@ -20,7 +20,6 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.btech.presentation.R
 import com.btech.presentation.buttons.PrimaryButton
@@ -43,13 +42,13 @@ fun ConfirmationDialogPreview() {
 fun ConfirmationDialog(
     title: String,
     message: String,
-    shape: Shape = RoundedCornerShape(BtechTheme.spacing.extraLargePadding),
+    shape: Shape = RoundedCornerShape(BtechTheme.spacing.spacing16),
     elevation: CardElevation = CardDefaults.cardElevation(
-        defaultElevation = BtechTheme.spacing.mediumPadding
+        defaultElevation = BtechTheme.spacing.spacing8
     ),
     positiveButtonTitle: String = stringResource(id = R.string.confirmation_popup_confirm),
     negativeButtonTitle: String = stringResource(id = R.string.confirmation_popup_decline),
-    contentPadding: PaddingValues = PaddingValues(horizontal = BtechTheme.spacing.extraLargePadding),
+    contentPadding: PaddingValues = PaddingValues(horizontal = BtechTheme.spacing.spacing16),
     onPositiveClick: () -> Unit,
     onNegativeClick: () -> Unit,
     onDismissRequest: () -> Unit = {}
@@ -77,7 +76,7 @@ fun ConfirmationDialog(
                     color = BtechTheme.colors.text.textPrimary,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(BtechTheme.spacing.extraLargePadding)
+                        .padding(BtechTheme.spacing.spacing16)
                 )
 
                 Text(
@@ -88,8 +87,8 @@ fun ConfirmationDialog(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(
-                            top = BtechTheme.spacing.extraSmallPadding,
-                            bottom = BtechTheme.spacing.extraLargePadding
+                            top = BtechTheme.spacing.spacing4,
+                            bottom = BtechTheme.spacing.spacing16
                         )
                         .padding(contentPadding)
                 )
@@ -99,7 +98,7 @@ fun ConfirmationDialog(
                 Row(
                     modifier = Modifier
                         .align(Alignment.End)
-                        .padding(top = BtechTheme.spacing.extraLargePadding)
+                        .padding(top = BtechTheme.spacing.spacing16)
                         .padding(contentPadding)
                 ) {
                     PrimaryButton(
@@ -109,7 +108,7 @@ fun ConfirmationDialog(
                         onPositiveClick()
                     }
 
-                    Spacer(Modifier.width(BtechTheme.spacing.extraSmallPadding))
+                    Spacer(Modifier.width(BtechTheme.spacing.spacing4))
 
                     SecondaryButton(
                         negativeButtonTitle,

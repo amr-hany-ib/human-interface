@@ -100,7 +100,7 @@ fun OtpTextField(
         )
 
         supportingText?.let {
-            Spacer(Modifier.height(BtechTheme.spacing.extraLargePadding))
+            Spacer(Modifier.height(BtechTheme.spacing.spacing16))
 
             Text(
                 text = it,
@@ -179,7 +179,7 @@ fun OtpTextField(
         )
 
         supportingText?.let {
-            Spacer(Modifier.height(BtechTheme.spacing.extraLargePadding))
+            Spacer(Modifier.height(BtechTheme.spacing.spacing16))
 
             Text(
                 text = it,

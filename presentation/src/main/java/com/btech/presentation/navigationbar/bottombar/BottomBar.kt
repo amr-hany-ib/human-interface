@@ -47,7 +47,7 @@ fun BottomBar(
                     } else {
                         Color.Unspecified
                     },
-                    height = BtechTheme.spacing.extraSmallPadding
+                    height = BtechTheme.spacing.spacing4
                 )
                 Tab(
                     selected = isSelected,

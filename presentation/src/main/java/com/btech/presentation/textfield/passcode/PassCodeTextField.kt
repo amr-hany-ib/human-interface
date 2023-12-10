@@ -61,7 +61,7 @@ fun PassCodeTextField(
             decorationBox = { _ ->
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(
-                        BtechTheme.spacing.extraLargePadding,
+                        BtechTheme.spacing.spacing16,
                         alignment = Alignment.CenterHorizontally
                     ),
                     verticalAlignment = Alignment.CenterVertically,
@@ -79,7 +79,7 @@ fun PassCodeTextField(
         )
 
         supportingText?.let {
-            Spacer(Modifier.height(BtechTheme.spacing.extraLargePadding))
+            Spacer(Modifier.height(BtechTheme.spacing.spacing16))
 
             Text(
                 text = it,
@@ -133,7 +133,7 @@ fun PassCodeTextField(
             decorationBox = { _ ->
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(
-                        BtechTheme.spacing.extraLargePadding,
+                        BtechTheme.spacing.spacing16,
                         alignment = Alignment.CenterHorizontally
                     ),
                     verticalAlignment = Alignment.CenterVertically,
@@ -151,7 +151,7 @@ fun PassCodeTextField(
         )
 
         supportingText?.let {
-            Spacer(Modifier.height(BtechTheme.spacing.extraLargePadding))
+            Spacer(Modifier.height(BtechTheme.spacing.spacing16))
 
             Text(
                 text = it,

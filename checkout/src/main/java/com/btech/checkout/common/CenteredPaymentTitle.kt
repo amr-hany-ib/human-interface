@@ -29,7 +29,7 @@ fun CenteredPaymentTitle(
             style = titleStyle
         )
 
-        Spacer(Modifier.height(BtechTheme.spacing.hugePadding))
+        Spacer(Modifier.height(BtechTheme.spacing.spacing24))
 
         CenteredPaymentAmount(subtitle, amount)
     }

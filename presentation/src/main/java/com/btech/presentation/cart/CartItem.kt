@@ -14,9 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.btech.presentation.theme.BtechTheme
 import com.btech.presentation.theme.notoSansFontFamily
@@ -73,12 +71,12 @@ fun CartItem(
                 modifier = Modifier.weight(1f)
             )
 
-            Spacer(Modifier.width(BtechTheme.spacing.mediumPadding))
+            Spacer(Modifier.width(BtechTheme.spacing.spacing8))
 
             Text(
                 text = trailingValue,
                 style = trailingValueStyle,
-                color = BtechTheme.colors.text.textPrimary,
+                color = BtechTheme.colors.text.textPrimary
             )
         }
 

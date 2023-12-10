@@ -18,8 +18,8 @@ fun CircularProgressIndicatorPreview() {
 @Composable
 fun CircularProgressIndicator(
     color: Color = BtechTheme.colors.action.actionPrimary,
-    size: Dp = BtechTheme.spacing.circularProgressPadding,
-    strokeWidth: Dp = BtechTheme.spacing.mediumPadding
+    size: Dp = BtechTheme.spacing.spacing88,
+    strokeWidth: Dp = BtechTheme.spacing.spacing8
 ) {
     androidx.compose.material3.CircularProgressIndicator(
         color = color,

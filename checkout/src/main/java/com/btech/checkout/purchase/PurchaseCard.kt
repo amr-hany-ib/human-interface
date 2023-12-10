@@ -96,7 +96,7 @@ fun PurchaseCard(
             PrimaryButton(
                 text = stringResource(id = R.string.print_receipt),
                 contentPadding = PaddingValues(
-                    vertical = BtechTheme.spacing.extraLargePadding,
+                    vertical = BtechTheme.spacing.spacing16,
                     horizontal = 24.dp
                 ),
                 modifier = Modifier

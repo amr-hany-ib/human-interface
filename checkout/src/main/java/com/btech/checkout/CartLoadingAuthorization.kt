@@ -27,12 +27,12 @@ fun CartAuthorizationLoading(
     ) {
         CircularProgressIndicator(
             color = BtechTheme.colors.action.actionPrimary,
-            modifier = Modifier.size(BtechTheme.spacing.circularProgressPadding)
+            modifier = Modifier.size(BtechTheme.spacing.spacing88)
                 .align(Alignment.CenterHorizontally),
-            strokeWidth = BtechTheme.spacing.mediumPadding
+            strokeWidth = BtechTheme.spacing.spacing8
         )
 
-        Spacer(Modifier.height(BtechTheme.spacing.extraHugePadding))
+        Spacer(Modifier.height(BtechTheme.spacing.spacing32))
 
         Text(
             text = title,
@@ -41,7 +41,7 @@ fun CartAuthorizationLoading(
             textAlign = TextAlign.Center
         )
 
-        Spacer(Modifier.height(BtechTheme.spacing.largePadding))
+        Spacer(Modifier.height(BtechTheme.spacing.spacing12))
 
         Text(
             text = subtitle,

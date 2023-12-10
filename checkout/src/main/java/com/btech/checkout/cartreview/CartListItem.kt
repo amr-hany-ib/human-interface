@@ -39,7 +39,7 @@ fun CartListItem(
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween,
-            modifier = Modifier.fillMaxWidth().padding(vertical = BtechTheme.spacing.extraLargePadding)
+            modifier = Modifier.fillMaxWidth().padding(vertical = BtechTheme.spacing.spacing16)
         ) {
             Text(
                 text = title,
@@ -50,8 +50,11 @@ fun CartListItem(
 
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(4.dp, alignment = Alignment.CenterHorizontally ),
-                //modifier = Modifier.weight(1f)
+                horizontalArrangement = Arrangement.spacedBy(
+                    4.dp,
+                    alignment = Alignment.CenterHorizontally
+                )
+                // modifier = Modifier.weight(1f)
             ) {
                 Text(
                     text = stringResource(

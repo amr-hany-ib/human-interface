@@ -91,11 +91,11 @@ fun CommercialOffer(
             )
         }
 
-        Spacer(Modifier.height(BtechTheme.spacing.hugePadding))
+        Spacer(Modifier.height(BtechTheme.spacing.spacing24))
 
         OfferTag(downPaymentAmount = downPayment)
 
-        Spacer(Modifier.height(BtechTheme.spacing.largePadding))
+        Spacer(Modifier.height(BtechTheme.spacing.spacing12))
 
         HorizontalDivider()
 

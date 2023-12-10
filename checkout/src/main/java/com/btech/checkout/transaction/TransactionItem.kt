@@ -32,7 +32,7 @@ fun TransactionItem(
             contentDescription = null
         )
 
-        Spacer(Modifier.height(BtechTheme.spacing.extraLargePadding))
+        Spacer(Modifier.height(BtechTheme.spacing.spacing16))
 
         Text(
             text = title,

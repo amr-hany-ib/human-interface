@@ -39,9 +39,9 @@ fun OfferBreakdown(
     Column(modifier) {
         HorizontalDivider()
 
-        Spacer(Modifier.height(BtechTheme.spacing.extraLargePadding))
+        Spacer(Modifier.height(BtechTheme.spacing.spacing16))
 
-        Column(verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.smallPadding)) {
+        Column(verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.spacing6)) {
             TextListItem(
                 title = stringResource(id = R.string.amount_to_be_financed),
                 label = financedAmount
@@ -72,7 +72,7 @@ fun OfferBreakdown(
                 label = adminFees
             )
 
-            Spacer(Modifier.height(BtechTheme.spacing.extraSmallPadding))
+            Spacer(Modifier.height(BtechTheme.spacing.spacing4))
         }
     }
 }

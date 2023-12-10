@@ -69,7 +69,7 @@ fun Dropdown(
 
         Row(
             Modifier
-                .clip(RoundedCornerShape(BtechTheme.spacing.largePadding))
+                .clip(RoundedCornerShape(BtechTheme.spacing.spacing12))
                 .clickable { onClick() }
                 .fillMaxWidth()
                 .background(BtechTheme.colors.field.fieldBackground)
