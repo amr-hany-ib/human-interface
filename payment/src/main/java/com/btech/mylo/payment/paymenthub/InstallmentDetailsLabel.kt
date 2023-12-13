@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import com.btech.presentation.theme.BtechTheme
 
@@ -42,4 +43,10 @@ fun InstallmentDetailsLabel(
             modifier = Modifier.size(iconSize)
         )
     }
+}
+
+@Preview
+@Composable
+private fun InstallmentDetailsLabelPreview() {
+    InstallmentDetailsLabel(text = "test")
 }

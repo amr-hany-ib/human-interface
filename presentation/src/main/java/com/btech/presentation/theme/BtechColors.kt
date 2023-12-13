@@ -58,7 +58,9 @@ data class UtilitiesColors(
 data class SkeletonColors(
     val grey: Color = Color(0xFFF2F4F7),
     val white: Color = Color(0xFFFFFFFF),
-    val skeletonBackground: Color = Color(0xFFE2E2E2)
+    val skeletonBackground: Color = Color(0xFFE2E2E2),
+    val green100: Color = Color(0xFF0C3E42),
+    val green200: Color = Color(0xFF3A5154)
 )
 
 @Keep
@@ -179,6 +181,7 @@ data class BorderColors(
 data class ContainerColors(
     val green: Color = Color(0xFF06292C),
     val green100: Color = Color(0xFF0C3E42),
+    val green200: Color = Color(0xFF3A5154),
     val grey: Color = Color(0xFFF2F2F2),
     val grey100: Color = Color(0xFF888888),
     val grey200: Color = Color(0xFFFAFAFA),
