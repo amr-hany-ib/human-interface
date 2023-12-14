@@ -1,4 +1,4 @@
-package com.btech.authentication.creditactivation
+package com.btech.mylo.home.presentation.partners
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -28,7 +29,7 @@ import com.btech.presentation.theme.BtechTheme
 import com.btech.presentation.theme.notoSansFontFamily
 
 @Composable
-fun PartnerBottomSheetItem(
+fun PartnerItem(
     partnerName: String,
     category: String,
     modifier: Modifier = Modifier
@@ -44,7 +45,7 @@ fun PartnerBottomSheetItem(
     ) {
         Box(
             modifier = Modifier
-                .clip(RoundedCornerShape(BtechTheme.spacing.spacing10))
+                .clip(CircleShape)
                 .background(BtechTheme.colors.containerColors.grey)
         ) {
             Image(
@@ -89,12 +90,12 @@ fun PartnerBottomSheetItemPreview() {
         Column(
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            PartnerBottomSheetItem(
+            PartnerItem(
                 partnerName = "B.TECH",
                 category = "Electronics"
             )
 
-            PartnerBottomSheetItem(
+            PartnerItem(
                 partnerName = "B.TECH",
                 category = "Electronics"
             )
