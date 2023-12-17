@@ -32,7 +32,7 @@ fun SecondaryButton(
     minHeight: Dp = BtechTheme.spacing.spacing52,
     colors: ButtonColors = ButtonDefaults.buttonColors(
         containerColor = BtechTheme.colors.field.fieldBackground,
-        contentColor = BtechTheme.colors.text.textSecondary,
+        contentColor = BtechTheme.colors.accent.accent1000,
         disabledContainerColor = BtechTheme.colors.field.fieldBackgroundDisabled,
         disabledContentColor = BtechTheme.colors.text.textOnColorDisabled
     ),

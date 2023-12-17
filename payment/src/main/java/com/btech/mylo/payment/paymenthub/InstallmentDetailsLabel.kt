@@ -11,7 +11,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import com.btech.presentation.theme.BtechTheme
@@ -20,9 +19,7 @@ import com.btech.presentation.theme.BtechTheme
 fun InstallmentDetailsLabel(
     text: String,
     modifier: Modifier = Modifier,
-    textStyle: TextStyle = BtechTheme.typography.body.bodyMd.copy(
-        textDecoration = TextDecoration.Underline
-    ),
+    textStyle: TextStyle = BtechTheme.typography.body.bodyMd,
     iconSize: Dp = BtechTheme.spacing.spacing16,
     horizontalArrangement: Arrangement.Horizontal = Arrangement.spacedBy(BtechTheme.spacing.spacing4)
 ) {

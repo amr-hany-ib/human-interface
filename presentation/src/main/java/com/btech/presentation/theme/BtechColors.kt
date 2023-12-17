@@ -40,13 +40,16 @@ data class BtechColors(
 
 @Keep
 data class AccentColors(
+    val accent100: Color = Color(0xFFE6EBEC),
     val accent300: Color = Color(0xffB6C5C6),
-    val accent600: Color = Color(0xFF006AFF)
+    val accent600: Color = Color(0xFF006AFF),
+    val accent1000: Color = Color(0xFF0C3E42)
 )
 
 @Keep
 data class Base(
-    val baseText: Color = Color(0xff54777A)
+    val baseText: Color = Color(0xff54777A),
+    val baseBackground: Color = Color(0xFFE6EBEC)
 )
 
 @Keep
@@ -76,8 +79,9 @@ data class TextColors(
     val textOnColor: Color = Color(0xFFFFFFFF),
     val textOnColorDisabled: Color = Color(0xFFA9A9A9),
     val textPrimary: Color = Color(0xFF1F1F1F),
-    val textSecondary: Color = Color(0xFF0C3E42),
+    val textSecondary: Color = Color(0xFF6F6F6F),
     val textTertiary: Color = Color(0xFFFCCC00),
+    val textQuaternary: Color = Color(0xFF6F6F6F),
     val textPlaceholder: Color = Color(0xFFA9A9A9),
     val textDanger: Color = Color(0xFFEA3A34)
 )
@@ -203,5 +207,9 @@ data class TokenlessColors(
     val ff5000: Color = Color(0xFFFF5000),
     val ffe9de: Color = Color(0xFFFFE9DE),
     val fafafa: Color = Color(0xFFFAFAFA),
-    val ff666666: Color = Color(0xFF666666)
+    val ff666666: Color = Color(0xFF666666),
+    val ff818181: Color = Color(0xFF818181),
+    val fff4f4f4: Color = Color(0xFFF4F4F4),
+    val fff4feff: Color = Color(0xFFF4FEFF),
+    val ffe9e9e9: Color = Color(0xFFE9E9E9)
 )

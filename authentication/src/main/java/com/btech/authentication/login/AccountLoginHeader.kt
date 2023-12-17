@@ -8,6 +8,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.tooling.preview.Preview
 import com.btech.presentation.theme.BtechTheme
 
@@ -17,6 +19,7 @@ fun AccountLoginHeader(
     mobileNumber: String,
     modifier: Modifier = Modifier
 ) {
+    val context = LocalContext.current
     Column(
         modifier = modifier.padding(BtechTheme.spacing.spacing16),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -27,14 +30,25 @@ fun AccountLoginHeader(
 
         Text(
             text = name ?: mobileNumber,
-            style = BtechTheme.typography.heading.heading4xl,
-            color = BtechTheme.colors.text.textSecondary
+            style = BtechTheme.typography.heading.heading4xl.copy(
+                textDirection = if (name == null) {
+                    TextDirection.Ltr
+                } else {
+                    TextDirection.ContentOrLtr
+                }
+            ),
+            color = BtechTheme.colors.accent.accent1000
         )
     }
 }
 
-@Preview
+@Preview(
+    locale = "en"
+)
 @Composable
 fun AccountLoginPreview() {
-    AccountLoginHeader(name = "Mohab Nadim", mobileNumber = "01098488223")
+    Column() {
+        AccountLoginHeader(name = "Mohab Nadim", mobileNumber = "01098488223")
+        AccountLoginHeader(name = null, mobileNumber = "+201098488223")
+    }
 }

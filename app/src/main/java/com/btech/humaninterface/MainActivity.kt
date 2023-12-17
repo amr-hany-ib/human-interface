@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -16,9 +16,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.btech.checkout.offerselection.CommercialOfferMonthlyPaymentItem
 import com.btech.humaninterface.ui.theme.HumanInterfaceTheme
-import com.btech.presentation.buttons.PrimaryButton
 import com.btech.presentation.common.getDecimalFormat
-import com.btech.presentation.progress.LinearSteppedProgressBar
+import com.btech.presentation.selection.TextSwitcher
+import com.btech.presentation.theme.BtechTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,20 +32,22 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Column {
                         val currentStep = remember { mutableStateOf(0) }
-                        LinearSteppedProgressBar(
-                            modifier = Modifier.fillMaxWidth(),
-                            numberOfSteps = 5,
-                            currentStep = currentStep.value
-                        )
-                        PrimaryButton(text = "") {
-                            currentStep.value++
-                        }
-                        PrimaryButton(text = "") {
-                            currentStep.value--
-                        }
-                    }
 
-                    // Greeting("Android")
+                        TextSwitcher(
+                            selectedIndex = currentStep.value,
+                            selectedTextStyle = BtechTheme.typography.utility.utilityMd.copy(color = BtechTheme.colors.action.actionPrimary),
+                            unselectedTextStyle = BtechTheme.typography.medium.mediumMd,
+                            items = listOf(
+                                "Upcoming",
+                                "Paid"
+                            ),
+                            onSelectionChange = {
+                                currentStep.value = it
+                            },
+                            shape = RoundedCornerShape(100),
+                            backgroundColor = BtechTheme.colors.containerColors.grey200
+                        )
+                    }
                 }
             }
         }

@@ -34,10 +34,10 @@ fun LoginProfilePicture(
         lineHeight = 28.85.sp,
         fontFamily = notoSansFontFamily,
         fontWeight = FontWeight.Normal,
-        color = BtechTheme.colors.text.textSecondary,
+        color = BtechTheme.colors.accent.accent1000,
         textAlign = TextAlign.Center
     ),
-    background: Color = BtechTheme.colors.text.textSecondary.copy(alpha = 0.1f)
+    background: Color = BtechTheme.colors.accent.accent1000.copy(alpha = 0.1f)
 ) {
     Box(
         modifier = modifier
@@ -51,7 +51,7 @@ fun LoginProfilePicture(
                 painter = painterResource(id = R.drawable.ic_account_active),
                 contentDescription = null,
                 modifier = Modifier.fillMaxSize(),
-                tint = BtechTheme.colors.text.textSecondary
+                tint = BtechTheme.colors.accent.accent1000
             )
         } else {
             Text(

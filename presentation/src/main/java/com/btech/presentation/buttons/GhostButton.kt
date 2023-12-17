@@ -27,9 +27,9 @@ fun GhostButton(
     minHeight: Dp = BtechTheme.spacing.spacing52,
     colors: ButtonColors = ButtonDefaults.buttonColors(
         containerColor = Color.Unspecified,
-        contentColor = BtechTheme.colors.text.textSecondary,
+        contentColor = BtechTheme.colors.accent.accent1000,
         disabledContainerColor = Color.Unspecified,
-        disabledContentColor = BtechTheme.colors.text.textSecondary
+        disabledContentColor = BtechTheme.colors.accent.accent1000
     ),
     trailingContent: @Composable Lambda? = null,
     onClick: Lambda

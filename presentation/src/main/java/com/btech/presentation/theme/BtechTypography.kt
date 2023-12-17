@@ -46,7 +46,15 @@ data class MediumStyle(
         platformStyle = PlatformTextStyle(
             includeFontPadding = false
         )
-
+    ),
+    val mediumMd: TextStyle = TextStyle(
+        fontSize = 12.sp,
+        lineHeight = 16.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight(500),
+        platformStyle = PlatformTextStyle(
+            includeFontPadding = false
+        )
     )
 )
 
@@ -205,7 +213,7 @@ data class UtilityStyle(
         fontSize = 16.sp,
         lineHeight = 22.sp,
         fontFamily = notoSansFontFamily,
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.SemiBold,
         platformStyle = PlatformTextStyle(
             includeFontPadding = false
         )

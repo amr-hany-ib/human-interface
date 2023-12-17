@@ -28,7 +28,7 @@ fun CenteredPaymentAmount(
             style = BtechTheme.typography.heading.heading4xl.copy(
                 textAlign = TextAlign.Center
             ),
-            color = BtechTheme.colors.text.textSecondary
+            color = BtechTheme.colors.accent.accent1000
         )
 
         Text(
@@ -36,7 +36,7 @@ fun CenteredPaymentAmount(
             style = BtechTheme.typography.display.displayMd.copy(
                 textAlign = TextAlign.Center
             ),
-            color = BtechTheme.colors.text.textSecondary
+            color = BtechTheme.colors.accent.accent1000
         )
     }
 }
