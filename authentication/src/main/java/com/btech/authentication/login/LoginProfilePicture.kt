@@ -20,6 +20,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.btech.presentation.Lambda
 import com.btech.presentation.R
 import com.btech.presentation.common.getInitialsFromName
 import com.btech.presentation.theme.BtechTheme
@@ -33,6 +34,14 @@ fun LoginProfilePicture(
         textAlign = TextAlign.Center,
         fontWeight = FontWeight.Normal
     ),
+    icon: @Composable Lambda = {
+        Icon(
+            painter = painterResource(id = R.drawable.ic_account_active),
+            contentDescription = null,
+            modifier = Modifier.fillMaxSize(),
+            tint = BtechTheme.colors.accent.accent1000
+        )
+    },
     background: Color = BtechTheme.colors.accent.accent1000.copy(alpha = 0.1f)
 ) {
     Box(
@@ -43,12 +52,7 @@ fun LoginProfilePicture(
         contentAlignment = Alignment.Center
     ) {
         if (name.isNullOrEmpty()) {
-            Icon(
-                painter = painterResource(id = R.drawable.ic_account_active),
-                contentDescription = null,
-                modifier = Modifier.fillMaxSize(),
-                tint = BtechTheme.colors.accent.accent1000
-            )
+            icon()
         } else {
             Text(
                 text = name.getInitialsFromName(),
