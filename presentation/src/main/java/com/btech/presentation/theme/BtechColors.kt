@@ -141,7 +141,7 @@ data class FocusColors(
 @Keep
 data class LayerColors(
     val layerBackgroundHighlight: Color = Color(0xFFCCE1FF),
-    val layerBackground: Color = Color(0xFFF3F3F3)
+    val layerBackground: Color = Color(0xFFF8F7F6)
 )
 
 @Keep

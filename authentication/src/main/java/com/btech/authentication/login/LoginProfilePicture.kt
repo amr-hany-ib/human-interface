@@ -20,19 +20,24 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.btech.presentation.Lambda
 import com.btech.presentation.R
 import com.btech.presentation.common.getInitialsFromName
 import com.btech.presentation.theme.BtechTheme
+import com.btech.presentation.theme.notoSansFontFamily
 
 @Composable
 fun LoginProfilePicture(
     name: String?,
     modifier: Modifier = Modifier,
-    style: TextStyle = BtechTheme.typography.heading.heading4xl.copy(
+    style: TextStyle = TextStyle(
+        fontSize = 34.62.sp,
+        lineHeight = 28.85.sp,
+        fontFamily = notoSansFontFamily,
+        fontWeight = FontWeight.Normal,
         color = BtechTheme.colors.accent.accent1000,
-        textAlign = TextAlign.Center,
-        fontWeight = FontWeight.Normal
+        textAlign = TextAlign.Center
     ),
     icon: @Composable Lambda = {
         Icon(
@@ -58,7 +63,7 @@ fun LoginProfilePicture(
                 text = name.getInitialsFromName(),
                 style = style,
                 maxLines = 1,
-                modifier = Modifier.offset(y = BtechTheme.spacing.spacing2)
+                modifier = Modifier.offset(y = 1.dp)
             )
         }
     }
