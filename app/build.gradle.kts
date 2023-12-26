@@ -80,6 +80,7 @@ dependencies {
     implementation(libs.landscapist.coil)
     implementation(project(":presentation"))
     implementation(project(":checkout"))
+    implementation(project(":authentication"))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)

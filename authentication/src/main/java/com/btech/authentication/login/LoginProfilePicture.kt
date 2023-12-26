@@ -3,7 +3,8 @@ package com.btech.authentication.login
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
@@ -19,23 +20,18 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.btech.presentation.R
 import com.btech.presentation.common.getInitialsFromName
 import com.btech.presentation.theme.BtechTheme
-import com.btech.presentation.theme.notoSansFontFamily
 
 @Composable
 fun LoginProfilePicture(
     name: String?,
     modifier: Modifier = Modifier,
-    style: TextStyle = TextStyle(
-        fontSize = 34.62.sp,
-        lineHeight = 28.85.sp,
-        fontFamily = notoSansFontFamily,
-        fontWeight = FontWeight.Normal,
+    style: TextStyle = BtechTheme.typography.heading.heading4xl.copy(
         color = BtechTheme.colors.accent.accent1000,
-        textAlign = TextAlign.Center
+        textAlign = TextAlign.Center,
+        fontWeight = FontWeight.Normal
     ),
     background: Color = BtechTheme.colors.accent.accent1000.copy(alpha = 0.1f)
 ) {
@@ -48,21 +44,25 @@ fun LoginProfilePicture(
     ) {
         if (name.isNullOrEmpty()) {
             Icon(
-                painter = painterResource(id = R.drawable.ic_account_active),
+                painter = painterResource(id = R.drawable.ic_account_lock),
                 contentDescription = null,
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier.height(BtechTheme.spacing.spacing32),
                 tint = BtechTheme.colors.accent.accent1000
             )
         } else {
             Text(
                 text = name.getInitialsFromName(),
-                style = style
+                style = style,
+                maxLines = 1,
+                modifier = Modifier.offset(y = BtechTheme.spacing.spacing2)
             )
         }
     }
 }
 
-@Preview()
+@Preview(
+    showBackground = true
+)
 @Composable
 private fun LoginAvatarPreview() {
     Column() {

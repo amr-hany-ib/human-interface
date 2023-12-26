@@ -77,7 +77,7 @@ fun TextSwitcher(
                     .offset(x = indicatorOffset)
                     .width(tabWidth)
                     .fillMaxHeight()
-                    .padding(Dp.Hairline)
+                    .padding(1.dp)
                     .shadow(BtechTheme.spacing.spacing2, shape)
                     .background(selectionBackgroundColor)
             )

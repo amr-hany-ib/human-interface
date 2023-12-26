@@ -3,8 +3,11 @@ package com.btech.humaninterface
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -14,8 +17,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.btech.authentication.login.LoginProfilePicture
 import com.btech.checkout.offerselection.CommercialOfferMonthlyPaymentItem
 import com.btech.humaninterface.ui.theme.HumanInterfaceTheme
+import com.btech.presentation.CollapsingRoundedHeader
 import com.btech.presentation.common.getDecimalFormat
 import com.btech.presentation.selection.TextSwitcher
 import com.btech.presentation.theme.BtechTheme
@@ -33,6 +39,9 @@ class MainActivity : ComponentActivity() {
                     Column {
                         val currentStep = remember { mutableStateOf(0) }
 
+                        LoginProfilePicture("Mohab Nadim")
+                        LoginProfilePicture("")
+
                         TextSwitcher(
                             selectedIndex = currentStep.value,
                             selectedTextStyle = BtechTheme.typography.utility.utilityMd.copy(color = BtechTheme.colors.action.actionPrimary),
@@ -46,6 +55,23 @@ class MainActivity : ComponentActivity() {
                             },
                             shape = RoundedCornerShape(100),
                             backgroundColor = BtechTheme.colors.containerColors.grey200
+                        )
+
+                        CollapsingRoundedHeader(
+                            title = "Product overview",
+                            titleBackgroundShape = RoundedCornerShape(16.dp),
+                            titleBackgroundColor = BtechTheme.colors.accent.accent1000,
+                            contentPadding = PaddingValues(
+                                vertical = BtechTheme.spacing.verticalPadding,
+                                horizontal = BtechTheme.spacing.spacing16
+                            ),
+                            content = {
+                                Text(
+                                    text = "Test content",
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                )
+                            }
                         )
                     }
                 }

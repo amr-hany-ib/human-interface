@@ -4,6 +4,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -19,18 +20,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.btech.authentication.R
 import com.btech.presentation.Lambda
 import com.btech.presentation.theme.BtechTheme
-import com.btech.presentation.theme.notoSansFontFamily
 
 @Composable
 fun StoreLocationItem(
@@ -57,27 +53,19 @@ fun StoreLocationItem(
             ),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Column(modifier = Modifier.weight(1f)) {
+        Column(
+            modifier = Modifier.weight(1f),
+            verticalArrangement = Arrangement.spacedBy(BtechTheme.spacing.spacing6)
+        ) {
             Text(
                 text = name,
-                style = TextStyle(
-                    fontSize = 16.sp,
-                    lineHeight = 20.sp,
-                    fontFamily = notoSansFontFamily,
-                    fontWeight = FontWeight.Bold,
-                    color = Color(0xFF171717)
-                )
+                style = BtechTheme.typography.heading.headingLg
             )
 
             Text(
                 text = location,
-                style = TextStyle(
-                    fontSize = 14.sp,
-                    lineHeight = 17.5.sp,
-                    fontFamily = notoSansFontFamily,
-                    fontWeight = FontWeight.Normal,
-                    color = Color(0xFF171717)
-                )
+                style = BtechTheme.typography.tokenlessStyle.fourteenTwenty400,
+                color = BtechTheme.colors.text.textSecondary
             )
         }
 
