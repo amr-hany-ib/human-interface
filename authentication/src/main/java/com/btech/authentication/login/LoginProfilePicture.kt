@@ -3,7 +3,7 @@ package com.btech.authentication.login
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -44,9 +44,9 @@ fun LoginProfilePicture(
     ) {
         if (name.isNullOrEmpty()) {
             Icon(
-                painter = painterResource(id = R.drawable.ic_account_lock),
+                painter = painterResource(id = R.drawable.ic_account_active),
                 contentDescription = null,
-                modifier = Modifier.height(BtechTheme.spacing.spacing32),
+                modifier = Modifier.fillMaxSize(),
                 tint = BtechTheme.colors.accent.accent1000
             )
         } else {
